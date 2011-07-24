@@ -46,13 +46,14 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 - (void)destroyStreamer;
 - (void)createStreamer;
 - (void)playbackStateChanged:(NSNotification *)aNotification;
-
+- (void)rotateLoadingFlare:(NSTimer*)timer;
 @end
 
 
 @implementation MainViewController
 
 @synthesize lvlMeter;
+@synthesize loadingFlare;
 @synthesize composeMessageButton;
 @synthesize playPauseButton;
 
@@ -61,6 +62,10 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // hide the loading flare until the user taps play
+    [loadingFlare setAlpha:0];
+    loadingTimer = nil;
     
     // hide the mail button on devices that don't have mail installed
     if (![MFMailComposeViewController canSendMail]) {
@@ -165,9 +170,35 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         
         [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
                               forState:UIControlStateNormal];
-	}
+        
+        if (!loadingTimer) {
+            loadingTimer = [[NSTimer alloc] initWithFireDate:[NSDate date]
+                                                    interval:1./60.
+                                                      target:self
+                                                    selector:@selector(rotateLoadingFlare:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+            [[NSRunLoop mainRunLoop] addTimer:loadingTimer
+                                      forMode:NSDefaultRunLoopMode];
+        }
+        
+        [UIView animateWithDuration:.3
+                         animations:^(void) {
+                             [self.loadingFlare setAlpha:1.];
+                         }];
+    }
 	else if ([streamer isPlaying])
 	{
+        [UIView animateWithDuration:.3
+                         animations:^(void) {
+                             [self.loadingFlare setAlpha:0.];
+                         }
+                         completion:^(BOOL finished) {
+                             [loadingTimer invalidate];
+                             [loadingTimer release];
+                             loadingTimer = nil;
+                         }];
+        
         [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
                               forState:UIControlStateNormal];
         
@@ -175,12 +206,27 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 	}
 	else if ([streamer isIdle])
 	{
+        [UIView animateWithDuration:.3
+                         animations:^(void) {
+                             [self.loadingFlare setAlpha:0.];
+                         }
+                         completion:^(BOOL finished) {
+                             [loadingTimer invalidate];
+                             [loadingTimer release];
+                             loadingTimer = nil;
+                         }];
+
         [lvlMeter setAq: nil];
 		[self destroyStreamer];
         
         [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
                               forState:UIControlStateNormal];
 	}
+}
+
+- (void)rotateLoadingFlare:(NSTimer *)timer
+{
+    self.loadingFlare.transform = CGAffineTransformRotate(self.loadingFlare.transform, .1);
 }
 
 #pragma mark FlipsideViewControllerDelegate
@@ -219,6 +265,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)viewDidUnload
 {
+    [self setLoadingFlare:nil];
     [super viewDidUnload];
 
     [self setComposeMessageButton:nil];
@@ -228,9 +275,12 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)dealloc
 {
+    [loadingTimer invalidate];
+    [loadingTimer release];
     [composeMessageButton release];
     [playPauseButton release];
     [lvlMeter release];
+    [loadingFlare release];
     [super dealloc];
 }
 

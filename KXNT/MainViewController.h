@@ -17,12 +17,15 @@
 {
     AudioStreamer* streamer;
     UIButton *composeMessageButton;
+    UIImageView *loadingFlare;
+    NSTimer* loadingTimer;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;
 
 @property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
 @property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
+@property (nonatomic, retain) IBOutlet UIImageView *loadingFlare;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;
