@@ -39,7 +39,7 @@
  */
 
 static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
-
+static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 @interface MainViewController(Private)
 
@@ -53,6 +53,7 @@ static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMA
 @implementation MainViewController
 
 @synthesize lvlMeter;
+@synthesize composeMessageButton;
 @synthesize playPauseButton;
 
 
@@ -61,6 +62,12 @@ static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMA
 {
     [super viewDidLoad];
     
+    // hide the mail button on devices that don't have mail installed
+    if (![MFMailComposeViewController canSendMail]) {
+        [composeMessageButton setHidden:YES];
+    }
+    
+    // setup the level meters
     UIColor *bgColor = [[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5];
     [lvlMeter setBackgroundColor:bgColor];
     [lvlMeter setBorderColor:bgColor];
@@ -94,6 +101,25 @@ static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMA
 - (void) enterForground
 {
     [lvlMeter setAq: [streamer audioQueue]];
+}
+
+#pragma mark MFMailComposeViewControllerDelegate
+
+
+- (IBAction)composeMessage:(id)sender
+{
+    MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
+    [mailComposer setToRecipients:[NSArray arrayWithObject:streamEmailContact]];
+    [mailComposer setSubject:@"Steve Nohrden Live!"];
+    [mailComposer setMailComposeDelegate:self];
+    [self presentModalViewController:mailComposer animated:YES];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark AudioStreamer Notifications
@@ -195,12 +221,16 @@ static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMA
 {
     [super viewDidUnload];
 
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [self setComposeMessageButton:nil];
+    [self setPlayPauseButton:nil];
+    [self setLvlMeter:nil];
 }
 
 - (void)dealloc
 {
+    [composeMessageButton release];
+    [playPauseButton release];
+    [lvlMeter release];
     [super dealloc];
 }
 

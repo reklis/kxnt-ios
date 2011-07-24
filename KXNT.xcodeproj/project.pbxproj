@@ -17,6 +17,8 @@
 		3B6DD54013DCAB7500400D86 /* the-dave-ramsey-show.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53813DCAB7500400D86 /* the-dave-ramsey-show.jpeg */; };
 		3B6DD54113DCAB7500400D86 /* the-kxnt-morning-news.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53913DCAB7500400D86 /* the-kxnt-morning-news.jpeg */; };
 		3B6DD54213DCAB7500400D86 /* wall-street-journal-this-morning.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53A13DCAB7500400D86 /* wall-street-journal-this-morning.jpeg */; };
+		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
+		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
 		3B86F78C13DBB83200B9C7A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78B13DBB83200B9C7A2 /* UIKit.framework */; };
 		3B86F78E13DBB83200B9C7A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78D13DBB83200B9C7A2 /* Foundation.framework */; };
 		3B86F79013DBB83200B9C7A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */; };
@@ -63,6 +65,8 @@
 		3B6DD53813DCAB7500400D86 /* the-dave-ramsey-show.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-dave-ramsey-show.jpeg"; sourceTree = "<group>"; };
 		3B6DD53913DCAB7500400D86 /* the-kxnt-morning-news.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-kxnt-morning-news.jpeg"; sourceTree = "<group>"; };
 		3B6DD53A13DCAB7500400D86 /* wall-street-journal-this-morning.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall-street-journal-this-morning.jpeg"; sourceTree = "<group>"; };
+		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
+		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B86F78713DBB83200B9C7A2 /* KXNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */,
 				3B86F7FA13DBC87C00B9C7A2 /* QuartzCore.framework in Frameworks */,
 				3B86F7F813DBC86F00B9C7A2 /* MediaPlayer.framework in Frameworks */,
 				3B86F7F613DBC85C00B9C7A2 /* AudioToolbox.framework in Frameworks */,
@@ -170,6 +175,7 @@
 		3B86F78A13DBB83200B9C7A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B6DD54513DCC3FE00400D86 /* MessageUI.framework */,
 				3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */,
 				3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */,
 				3B86F7F513DBC85C00B9C7A2 /* AudioToolbox.framework */,
@@ -247,6 +253,7 @@
 			children = (
 				3B6DD53213DCAB7500400D86 /* radioshows */,
 				3B86F7DE13DBC33C00B9C7A2 /* Background.png */,
+				3B6DD54313DCC23B00400D86 /* envelope.png */,
 				3B86F7FB13DBCC3800B9C7A2 /* loading.png */,
 				3B86F7DC13DBC2EB00B9C7A2 /* play.png */,
 				3B86F7FD13DBCE7A00B9C7A2 /* pause.png */,
@@ -340,6 +347,7 @@
 				3B6DD54013DCAB7500400D86 /* the-dave-ramsey-show.jpeg in Resources */,
 				3B6DD54113DCAB7500400D86 /* the-kxnt-morning-news.jpeg in Resources */,
 				3B6DD54213DCAB7500400D86 /* wall-street-journal-this-morning.jpeg in Resources */,
+				3B6DD54413DCC23B00400D86 /* envelope.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
