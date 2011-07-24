@@ -28,6 +28,7 @@
     IBOutlet UILabel *showcaseTagline;
     
     @private
+    UIImageView* currentlyZoomedImage;
     CGRect imageOriginBounds;
     CGPoint imageOriginCenter;
     
@@ -40,7 +41,7 @@
 - (IBAction)done:(id)sender;
 
 - (void)zoomImage:(UIGestureRecognizer*)zoomGesture;
-- (void)dismissImage:(UIGestureRecognizer*)dismissGesture;
+- (void)dismissImage;
 
 @end
 

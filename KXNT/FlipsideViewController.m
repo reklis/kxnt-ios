@@ -45,6 +45,7 @@
 
 - (void)viewDidLoad
 {
+    currentlyZoomedImage = nil;
     imageOriginBounds = CGRectZero;
     imageOriginCenter = CGPointZero;
     
@@ -122,8 +123,11 @@
         return;
     }
 
-    // bail if we are already zoomed on something
-    if (!CGPointEqualToPoint(imageOriginCenter, CGPointZero)) return;
+    // dismiss if we are already zoomed on something
+    if (currentlyZoomedImage != nil) {
+        [self dismissImage];
+        return;
+    }
     
     // find the correct image to zoom
     UIImageView* iv = nil;
@@ -139,18 +143,27 @@
         }
     }
     
+    // bail if we couldn't find anything
     if (iv == nil) return;
     
+    // calculate the new position for theimage
     CGRect viewFrame = self.view.frame;
     CGFloat h = CGRectGetHeight(viewFrame);
     CGFloat w = CGRectGetWidth(viewFrame);
     CGPoint c = CGPointMake(w/2., h*.6);
     
+    // save the previous location
     imageOriginBounds = iv.bounds;
     imageOriginCenter = iv.center;
+    currentlyZoomedImage = iv;
     
+    // animate the transition to the new location
     [UIView animateWithDuration:.3
                      animations:^(void) {
+                         [showcaseImage setAlpha:.3];
+                         [showcaseDescription setAlpha:.3];
+                         [showcaseTagline setAlpha:.3];
+
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft
                                                 forView:iv
                                                   cache:YES];
@@ -160,23 +173,21 @@
                          [iv setCenter:c];
                      }
                      completion:^(BOOL finished) {
-                         UITapGestureRecognizer* dismissGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                                          action:@selector(dismissImage:)];
-                         [dismissGesture setNumberOfTapsRequired:1];
-                         [iv addGestureRecognizer:dismissGesture];
-                         [dismissGesture release];
                      }];
 }
 
-- (void)dismissImage:(UIGestureRecognizer*)dismissGesture
+- (void)dismissImage
 {
-    UIImageView* iv = (UIImageView*) [dismissGesture view];
+    UIImageView* iv = currentlyZoomedImage;
     NSAssert(iv != nil, @"invalid gesture target");
     
-    [iv removeGestureRecognizer:dismissGesture];
-    
+    // animate the dismissal
     [UIView animateWithDuration:.3
                      animations:^(void) {
+                         [showcaseImage setAlpha:1];
+                         [showcaseDescription setAlpha:1];
+                         [showcaseTagline setAlpha:1];
+                         
                          [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight
                                                 forView:iv
                                                   cache:YES];
@@ -185,8 +196,10 @@
                          [iv setCenter:imageOriginCenter];
                      }
                      completion:^(BOOL finished) {
+                         // reset to baseline when done
                          imageOriginBounds = CGRectZero;
                          imageOriginCenter = CGPointZero;
+                         currentlyZoomedImage = nil;
                      }];
 }
 
