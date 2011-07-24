@@ -60,7 +60,6 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 	GLint						_backingHeight;
 	EAGLContext					*_context;
 	GLuint						_viewRenderbuffer, _viewFramebuffer;
-//    NSTimeInterval              _lastDrawTime;
 }
 
 @end

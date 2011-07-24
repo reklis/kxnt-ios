@@ -87,7 +87,6 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 	_viewFramebuffer = 0;
 	glDeleteRenderbuffersOES(1, &_viewRenderbuffer);
 	_viewRenderbuffer = 0;
-	
 }
 
 - (void)_setupView
@@ -128,8 +127,11 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
                                                            alpha:1.];
     }
     
-	_vertical = ([self frame].size.width < [self frame].size.height) ? YES : NO;
-
+    CGRect f = [self frame];
+    CGFloat w = CGRectGetWidth(f);
+    CGFloat h = CGRectGetHeight(f);
+	_vertical = (w < h) ? YES : NO;
+    
 	CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
 	
 	self.opaque = NO;
@@ -152,12 +154,6 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 - (void)_drawView
 {
 	BOOL success = NO;
-//
-//    NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];
-//    if (!_lastDrawTime) {
-//        _lastDrawTime = now;
-//    }
-//    NSTimeInterval drawDelta = now - _lastDrawTime; // first time around it will be zero
 	
 	if (!_viewFramebuffer) return;
 	
@@ -178,18 +174,18 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	
 	glPushMatrix();
-	
+	    
 	CGRect bds;
 	
 	if (_vertical)
 	{
 		glTranslatef(0., 0., 0.);
 		glScalef(1., 1., 1.);
-		bds = [self bounds];
+		bds = CGRectMake(0., 0., _backingWidth, _backingHeight);
 	} else {
 		glTranslatef(0., [self bounds].size.height, 0.);
 		glRotatef(-90., 0., 0., 1.);
-		bds = CGRectMake(0., 0., [self bounds].size.height, [self bounds].size.width);
+		bds = CGRectMake(0., 0., _backingHeight, _backingWidth);
 	}
 	
 	
