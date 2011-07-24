@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
+		3B6DD53113DC792D00400D86 /* nohrden-photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53013DC792D00400D86 /* nohrden-photo.jpg */; };
 		3B86F78C13DBB83200B9C7A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78B13DBB83200B9C7A2 /* UIKit.framework */; };
 		3B86F78E13DBB83200B9C7A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78D13DBB83200B9C7A2 /* Foundation.framework */; };
 		3B86F79013DBB83200B9C7A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
+		3B6DD53013DC792D00400D86 /* nohrden-photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nohrden-photo.jpg"; sourceTree = "<group>"; };
 		3B86F78713DBB83200B9C7A2 /* KXNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -217,6 +219,7 @@
 				3B86F7DC13DBC2EB00B9C7A2 /* play.png */,
 				3B86F7FD13DBCE7A00B9C7A2 /* pause.png */,
 				3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */,
+				3B6DD53013DC792D00400D86 /* nohrden-photo.jpg */,
 				3B86F7D813DBBE7500B9C7A2 /* grill-large.png */,
 			);
 			path = Images;
@@ -296,6 +299,7 @@
 				3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */,
 				3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */,
 				3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */,
+				3B6DD53113DC792D00400D86 /* nohrden-photo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
