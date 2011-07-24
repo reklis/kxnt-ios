@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B86F78C13DBB83200B9C7A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78B13DBB83200B9C7A2 /* UIKit.framework */; };
 		3B86F78E13DBB83200B9C7A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78D13DBB83200B9C7A2 /* Foundation.framework */; };
 		3B86F79013DBB83200B9C7A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B86F78713DBB83200B9C7A2 /* KXNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,6 +178,7 @@
 				3B86F79413DBB83200B9C7A2 /* InfoPlist.strings */,
 				3B86F79713DBB83200B9C7A2 /* KXNT-Prefix.pch */,
 				3B86F79813DBB83200B9C7A2 /* main.m */,
+				3B6DD52C13DC77A000400D86 /* Errors.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				3B86F7DF13DBC33C00B9C7A2 /* Background.png in Resources */,
 				3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */,
 				3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */,
+				3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +326,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3B6DD52C13DC77A000400D86 /* Errors.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6DD52D13DC77A000400D86 /* en */,
+			);
+			name = Errors.strings;
+			sourceTree = "<group>";
+		};
 		3B86F79413DBB83200B9C7A2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,6 +432,7 @@
 				3B86F7AE13DBB83200B9C7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

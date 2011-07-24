@@ -38,7 +38,7 @@
  Version=2
  */
 
-static NSString* streamSource = @"http://4693.live.streamtheworld.com:3690/KXNTAM_SC";
+static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
 
 
 @interface MainViewController(Private)
