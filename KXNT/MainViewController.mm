@@ -8,7 +8,37 @@
 
 #import "MainViewController.h"
 
-static NSString* streamSource = @"http://4723.live.streamtheworld.com:80/KXNTAM_SC";
+/*
+ 
+ // http://provisioning.streamtheworld.com/pls/KXNTAM.pls
+ 
+ [playlist]
+ File1=http://4553.live.streamtheworld.com:80/KXNTAM_SC
+ File2=http://4553.live.streamtheworld.com:3690/KXNTAM_SC
+ File3=http://4553.live.streamtheworld.com:443/KXNTAM_SC
+ File4=http://4723.live.streamtheworld.com:80/KXNTAM_SC
+ File5=http://4723.live.streamtheworld.com:3690/KXNTAM_SC
+ File6=http://4723.live.streamtheworld.com:443/KXNTAM_SC
+ File7=http://4693.live.streamtheworld.com:80/KXNTAM_SC
+ File8=http://4693.live.streamtheworld.com:3690/KXNTAM_SC
+ File9=http://4693.live.streamtheworld.com:443/KXNTAM_SC
+ File10=http://1331.live.streamtheworld.com:80/KXNTAM_SC
+ File11=http://1331.live.streamtheworld.com:3690/KXNTAM_SC
+ File12=http://1331.live.streamtheworld.com:443/KXNTAM_SC
+ File13=http://4983.live.streamtheworld.com:80/KXNTAM_SC
+ File14=http://4983.live.streamtheworld.com:3690/KXNTAM_SC
+ File15=http://4983.live.streamtheworld.com:443/KXNTAM_SC
+ File16=http://4583.live.streamtheworld.com:80/KXNTAM_SC
+ File17=http://4583.live.streamtheworld.com:3690/KXNTAM_SC
+ File18=http://4583.live.streamtheworld.com:443/KXNTAM_SC
+ Title1=KXNTAM_SC
+ Title2=KXNTAM_SC-Bak
+ Length1=-1
+ NumberOfEntries=18
+ Version=2
+ */
+
+static NSString* streamSource = @"http://4693.live.streamtheworld.com:3690/KXNTAM_SC";
 
 
 @interface MainViewController(Private)
