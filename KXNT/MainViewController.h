@@ -7,12 +7,21 @@
 //
 
 #import "FlipsideViewController.h"
+#import "AQLevelMeter.h"
+#import "AudioStreamer.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
-
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+{
+    AudioStreamer* streamer;
 }
 
+@property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
+@property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
 
 - (IBAction)showInfo:(id)sender;
+- (IBAction)playPause:(id)sender;
+
+- (void) enterBackground;
+- (void) enterForground;
 
 @end
