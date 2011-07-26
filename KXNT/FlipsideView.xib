@@ -78,12 +78,13 @@
 						<string key="NSFrame">{{20, 61}, {280, 138}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="544119764"/>
 						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">nohrden-photo.jpg</string>
+							<string key="NSResourceName">nohrden-photo.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="677873561">
@@ -92,6 +93,7 @@
 						<string key="NSFrame">{{64, 207}, {193, 73}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="128013710"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -120,6 +122,7 @@
 						<string key="NSFrame">{{59, 266}, {203, 48}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="677873561"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -144,6 +147,7 @@
 						<string key="NSFrame">{{42, 323}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="683636557"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -158,6 +162,7 @@
 						<string key="NSFrame">{{102, 323}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="233207287"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -172,6 +177,7 @@
 						<string key="NSFrame">{{162, 323}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="944412907"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -186,6 +192,7 @@
 						<string key="NSFrame">{{221, 323}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="171092059"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -200,6 +207,7 @@
 						<string key="NSFrame">{{42, 383}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="330563630"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -214,6 +222,7 @@
 						<string key="NSFrame">{{102, 383}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="430892677"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -228,6 +237,7 @@
 						<string key="NSFrame">{{162, 383}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="602727232"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -242,6 +252,7 @@
 						<string key="NSFrame">{{221, 383}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -10558,7 +10569,7 @@ AAEAAQABA</bytes>
 				<string>coast-to-coast-am.jpeg</string>
 				<string>live-and-local.jpeg</string>
 				<string>mark-levin.jpeg</string>
-				<string>nohrden-photo.jpg</string>
+				<string>nohrden-photo.png</string>
 				<string>rush-limbaugh.jpeg</string>
 				<string>sean-hannity.jpeg</string>
 				<string>the-dave-ramsey-show.jpeg</string>
