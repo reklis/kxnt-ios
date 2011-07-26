@@ -308,6 +308,9 @@
 /* Begin PBXProject section */
 		3B86F77E13DBB83100B9C7A2 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Cibo Technology, LLC";
+			};
 			buildConfigurationList = 3B86F78113DBB83100B9C7A2 /* Build configuration list for PBXProject "KXNT" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
