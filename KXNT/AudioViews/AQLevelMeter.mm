@@ -66,7 +66,8 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 @synthesize vertical = _vertical;
 
 - (id)initWithFrame:(CGRect)frame {
-	if (self = [super initWithFrame:frame]) {
+    self = [super initWithFrame:frame];
+	if (self) {
 		_refreshHz = 1. / 30.;
 		_showsPeaks = YES;
 		_channelNumbers = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:0], nil];
@@ -83,7 +84,8 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
 
 - (id)initWithCoder:(NSCoder *)coder {
-	if (self = [super initWithCoder:coder]) {
+    self = [super initWithCoder:coder];
+	if (self) {
 		_refreshHz = 1. / 30.;
 		_showsPeaks = YES;
 		_channelNumbers = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:0], nil];
@@ -197,6 +199,8 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
 - (void)_refresh
 {
+    if (self.hidden) return;
+    
 	BOOL success = NO;
 
 	// if we have no queue, but still have levels, gradually bring them down

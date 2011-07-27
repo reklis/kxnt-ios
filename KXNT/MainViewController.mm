@@ -100,12 +100,12 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void) enterBackground
 {
-    [lvlMeter setAq: nil];
+    [lvlMeter setHidden:YES];
 }
 
 - (void) enterForground
 {
-    [lvlMeter setAq: [streamer audioQueue]];
+    [lvlMeter setHidden:NO];
 }
 
 #pragma mark MFMailComposeViewControllerDelegate

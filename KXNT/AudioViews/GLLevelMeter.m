@@ -153,8 +153,6 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
 - (void)_drawView
 {
-	BOOL success = NO;
-	
 	if (!_viewFramebuffer) return;
 	
 	// Make sure that you are drawing to the current context
@@ -306,7 +304,6 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 		}
 	}
 	
-	success = YES;
 bail:	
 	glPopMatrix();
 	
