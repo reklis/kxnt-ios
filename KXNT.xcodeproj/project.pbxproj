@@ -41,7 +41,6 @@
 		3B86F7D513DBBBA500B9C7A2 /* CAXException.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7C913DBBBA500B9C7A2 /* CAXException.mm */; };
 		3B86F7DB13DBBEF700B9C7A2 /* nohrden-metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */; };
 		3B86F7DD13DBC2EB00B9C7A2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7DC13DBC2EB00B9C7A2 /* play.png */; };
-		3B86F7DF13DBC33C00B9C7A2 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7DE13DBC33C00B9C7A2 /* Background.png */; };
 		3B86F7E113DBC6D400B9C7A2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7E013DBC6D400B9C7A2 /* CoreAudio.framework */; };
 		3B86F7E313DBC6DA00B9C7A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7E213DBC6DA00B9C7A2 /* OpenGLES.framework */; };
 		3B86F7E613DBC79800B9C7A2 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7E413DBC79800B9C7A2 /* CADebugPrintf.cpp */; };
@@ -111,7 +110,6 @@
 		3B86F7C913DBBBA500B9C7A2 /* CAXException.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAXException.mm; sourceTree = "<group>"; };
 		3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nohrden-metal.png"; sourceTree = "<group>"; };
 		3B86F7DC13DBC2EB00B9C7A2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		3B86F7DE13DBC33C00B9C7A2 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		3B86F7E013DBC6D400B9C7A2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		3B86F7E213DBC6DA00B9C7A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3B86F7E413DBC79800B9C7A2 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				3B6DD53213DCAB7500400D86 /* radioshows */,
-				3B86F7DE13DBC33C00B9C7A2 /* Background.png */,
 				3B6DD54313DCC23B00400D86 /* envelope.png */,
 				3B86F7FB13DBCC3800B9C7A2 /* loading.png */,
 				3B6DD54713DCCBFD00400D86 /* loading-flare.png */,
@@ -324,6 +321,7 @@
 		3B86F77E13DBB83100B9C7A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Cibo Technology, LLC";
 			};
 			buildConfigurationList = 3B86F78113DBB83100B9C7A2 /* Build configuration list for PBXProject "KXNT" */;
@@ -354,7 +352,6 @@
 				3B86F7A913DBB83200B9C7A2 /* FlipsideView.xib in Resources */,
 				3B86F7DB13DBBEF700B9C7A2 /* nohrden-metal.png in Resources */,
 				3B86F7DD13DBC2EB00B9C7A2 /* play.png in Resources */,
-				3B86F7DF13DBC33C00B9C7A2 /* Background.png in Resources */,
 				3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */,
 				3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */,
 				3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */,
