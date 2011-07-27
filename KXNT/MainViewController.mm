@@ -55,6 +55,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 @synthesize lvlMeter;
 @synthesize loadingFlare;
 @synthesize composeMessageButton;
+@synthesize nowPlayingBanner;
 @synthesize playPauseButton;
 
 
@@ -233,13 +234,29 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
                               forState:UIControlStateNormal];
         
+        [nowPlayingBanner setAlpha:0.];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [nowPlayingBanner setHidden:NO];
+            [UIView animateWithDuration:.25
+                             animations:^(void) {
+                                 [nowPlayingBanner setAlpha:1.];
+                             }];
+            
             [lvlMeter setHidden:NO];
             [lvlMeter setAq: [streamer audioQueue]];
         });
 	}
 	else if ([streamer isIdle])
 	{
+        [nowPlayingBanner setAlpha:1.];
+        [UIView animateWithDuration:.25
+                         animations:^(void) {
+                             [nowPlayingBanner setAlpha:0.];
+                         }
+                         completion:^(BOOL finished) {
+                             //[nowPlayingBanner setHidden:YES];
+                         }];
+        
         [UIView animateWithDuration:.3
                          animations:^(void) {
                              [self.loadingFlare setAlpha:0.];
@@ -300,6 +317,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 - (void)viewDidUnload
 {
     [self setLoadingFlare:nil];
+    [self setNowPlayingBanner:nil];
     [super viewDidUnload];
 
     [self setComposeMessageButton:nil];
@@ -315,6 +333,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [playPauseButton release];
     [lvlMeter release];
     [loadingFlare release];
+    [nowPlayingBanner release];
     [super dealloc];
 }
 

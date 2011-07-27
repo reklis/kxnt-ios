@@ -15,6 +15,7 @@
 			<string>IBUIButton</string>
 			<string>IBUIImageView</string>
 			<string>IBUIView</string>
+			<string>IBUILabel</string>
 			<string>IBProxyObject</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -141,13 +142,40 @@
 						<string key="NSFrame">{{103, 162}, {114, 114}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="207209155"/>
+						<reference key="NSNextKeyView" ref="233597712"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">loading-flare.png</string>
 						</object>
+					</object>
+					<object class="IBUILabel" id="233597712">
+						<reference key="NSNextResponder" ref="883825266"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{20, 290}, {280, 22}}</string>
+						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="207209155"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">7</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<string key="IBUIText">Now Playing: KXNT NewsRadio 100.5 FM</string>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
+						<reference key="IBUITextColor" ref="695040092"/>
+						<nil key="IBUIHighlightedColor"/>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwLjcAA</bytes>
+						</object>
+						<int key="IBUIBaselineAdjustment">1</int>
+						<float key="IBUIMinimumFontSize">10</float>
 					</object>
 					<object class="IBUIView" id="207209155">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -273,6 +301,14 @@
 					</object>
 					<int key="connectionID">53</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nowPlayingBanner</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="233597712"/>
+					</object>
+					<int key="connectionID">55</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -306,6 +342,7 @@
 							<reference ref="207209155"/>
 							<reference ref="790817779"/>
 							<reference ref="643045096"/>
+							<reference ref="233597712"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -344,6 +381,11 @@
 						<reference key="object" ref="643045096"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">54</int>
+						<reference key="object" ref="233597712"/>
+						<reference key="parent" ref="883825266"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -362,6 +404,7 @@
 					<string>43.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
 					<string>52.IBPluginDependency</string>
+					<string>54.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -374,6 +417,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>AQLevelMeter</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -391,7 +435,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">53</int>
+			<int key="maxID">55</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -453,6 +497,7 @@
 							<string>composeMessageButton</string>
 							<string>loadingFlare</string>
 							<string>lvlMeter</string>
+							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -460,6 +505,7 @@
 							<string>UIButton</string>
 							<string>UIImageView</string>
 							<string>AQLevelMeter</string>
+							<string>UILabel</string>
 							<string>UIButton</string>
 						</object>
 					</object>
@@ -470,6 +516,7 @@
 							<string>composeMessageButton</string>
 							<string>loadingFlare</string>
 							<string>lvlMeter</string>
+							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -485,6 +532,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">lvlMeter</string>
 								<string key="candidateClassName">AQLevelMeter</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">nowPlayingBanner</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">playPauseButton</string>
