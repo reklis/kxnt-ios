@@ -95,7 +95,6 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 	{
 		[streamer stop];
 	}
-
 }
 
 - (void) enterBackground
@@ -106,6 +105,38 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 - (void) enterForground
 {
     [lvlMeter setHidden:NO];
+}
+
+#pragma mark Background Audio Controls
+
+- (void) viewDidAppear: (BOOL) animated {
+    
+    [super viewDidAppear: animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (BOOL) canBecomeFirstResponder {
+    
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    switch(event.subtype) {
+        case UIEventSubtypeRemoteControlTogglePlayPause:
+            [self playPause:nil];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void) viewWillDisppear: (BOOL) animated {
+    
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+    
+    [super viewWillDisappear: animated];
 }
 
 #pragma mark MFMailComposeViewControllerDelegate
