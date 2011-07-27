@@ -9,14 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B0AD44813DFAD98003DD30C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AD44713DFAD98003DD30C /* iTunesArtwork */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
-		3B6DD53B13DCAB7500400D86 /* coast-to-coast-am.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53313DCAB7500400D86 /* coast-to-coast-am.jpeg */; };
-		3B6DD53C13DCAB7500400D86 /* live-and-local.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53413DCAB7500400D86 /* live-and-local.jpeg */; };
-		3B6DD53D13DCAB7500400D86 /* mark-levin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53513DCAB7500400D86 /* mark-levin.jpeg */; };
-		3B6DD53E13DCAB7500400D86 /* rush-limbaugh.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53613DCAB7500400D86 /* rush-limbaugh.jpeg */; };
-		3B6DD53F13DCAB7500400D86 /* sean-hannity.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53713DCAB7500400D86 /* sean-hannity.jpeg */; };
-		3B6DD54013DCAB7500400D86 /* the-dave-ramsey-show.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53813DCAB7500400D86 /* the-dave-ramsey-show.jpeg */; };
-		3B6DD54113DCAB7500400D86 /* the-kxnt-morning-news.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53913DCAB7500400D86 /* the-kxnt-morning-news.jpeg */; };
-		3B6DD54213DCAB7500400D86 /* wall-street-journal-this-morning.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD53A13DCAB7500400D86 /* wall-street-journal-this-morning.jpeg */; };
 		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
 		3B6DD54813DCCBFD00400D86 /* loading-flare.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54713DCCBFD00400D86 /* loading-flare.png */; };
@@ -51,6 +43,14 @@
 		3B86F7FA13DBC87C00B9C7A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */; };
 		3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FB13DBCC3800B9C7A2 /* loading.png */; };
 		3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FD13DBCE7A00B9C7A2 /* pause.png */; };
+		3BDBF4E913DFB2E300058C7C /* coast-to-coast-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */; };
+		3BDBF4EA13DFB2E300058C7C /* live-and-local.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E213DFB2E300058C7C /* live-and-local.png */; };
+		3BDBF4EB13DFB2E300058C7C /* mark-levin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E313DFB2E300058C7C /* mark-levin.png */; };
+		3BDBF4EC13DFB2E300058C7C /* rush-limbaugh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */; };
+		3BDBF4ED13DFB2E300058C7C /* sean-hannity.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E513DFB2E300058C7C /* sean-hannity.png */; };
+		3BDBF4EE13DFB2E300058C7C /* the-dave-ramsey-show.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */; };
+		3BDBF4EF13DFB2E300058C7C /* the-kxnt-morning-news.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */; };
+		3BDBF4F013DFB2E300058C7C /* wall-street-journal-this-morning.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */; };
 		3BE538DC13DE69F400D5A010 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DB13DE69F400D5A010 /* Default.png */; };
 		3BE538DE13DE69F900D5A010 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DD13DE69F900D5A010 /* Default@2x.png */; };
 		3BE538E013DE6A0000D5A010 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DF13DE6A0000D5A010 /* Icon.png */; };
@@ -63,14 +63,6 @@
 /* Begin PBXFileReference section */
 		3B0AD44713DFAD98003DD30C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
-		3B6DD53313DCAB7500400D86 /* coast-to-coast-am.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coast-to-coast-am.jpeg"; sourceTree = "<group>"; };
-		3B6DD53413DCAB7500400D86 /* live-and-local.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "live-and-local.jpeg"; sourceTree = "<group>"; };
-		3B6DD53513DCAB7500400D86 /* mark-levin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mark-levin.jpeg"; sourceTree = "<group>"; };
-		3B6DD53613DCAB7500400D86 /* rush-limbaugh.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rush-limbaugh.jpeg"; sourceTree = "<group>"; };
-		3B6DD53713DCAB7500400D86 /* sean-hannity.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sean-hannity.jpeg"; sourceTree = "<group>"; };
-		3B6DD53813DCAB7500400D86 /* the-dave-ramsey-show.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-dave-ramsey-show.jpeg"; sourceTree = "<group>"; };
-		3B6DD53913DCAB7500400D86 /* the-kxnt-morning-news.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-kxnt-morning-news.jpeg"; sourceTree = "<group>"; };
-		3B6DD53A13DCAB7500400D86 /* wall-street-journal-this-morning.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall-street-journal-this-morning.jpeg"; sourceTree = "<group>"; };
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B6DD54713DCCBFD00400D86 /* loading-flare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-flare.png"; sourceTree = "<group>"; };
@@ -122,6 +114,14 @@
 		3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B86F7FB13DBCC3800B9C7A2 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		3B86F7FD13DBCE7A00B9C7A2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coast-to-coast-am.png"; sourceTree = "<group>"; };
+		3BDBF4E213DFB2E300058C7C /* live-and-local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live-and-local.png"; sourceTree = "<group>"; };
+		3BDBF4E313DFB2E300058C7C /* mark-levin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mark-levin.png"; sourceTree = "<group>"; };
+		3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rush-limbaugh.png"; sourceTree = "<group>"; };
+		3BDBF4E513DFB2E300058C7C /* sean-hannity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sean-hannity.png"; sourceTree = "<group>"; };
+		3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-dave-ramsey-show.png"; sourceTree = "<group>"; };
+		3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-kxnt-morning-news.png"; sourceTree = "<group>"; };
+		3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wall-street-journal-this-morning.png"; sourceTree = "<group>"; };
 		3BE538DB13DE69F400D5A010 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3BE538DD13DE69F900D5A010 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3BE538DF13DE6A0000D5A010 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -155,14 +155,14 @@
 		3B6DD53213DCAB7500400D86 /* radioshows */ = {
 			isa = PBXGroup;
 			children = (
-				3B6DD53313DCAB7500400D86 /* coast-to-coast-am.jpeg */,
-				3B6DD53413DCAB7500400D86 /* live-and-local.jpeg */,
-				3B6DD53513DCAB7500400D86 /* mark-levin.jpeg */,
-				3B6DD53613DCAB7500400D86 /* rush-limbaugh.jpeg */,
-				3B6DD53713DCAB7500400D86 /* sean-hannity.jpeg */,
-				3B6DD53813DCAB7500400D86 /* the-dave-ramsey-show.jpeg */,
-				3B6DD53913DCAB7500400D86 /* the-kxnt-morning-news.jpeg */,
-				3B6DD53A13DCAB7500400D86 /* wall-street-journal-this-morning.jpeg */,
+				3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */,
+				3BDBF4E213DFB2E300058C7C /* live-and-local.png */,
+				3BDBF4E313DFB2E300058C7C /* mark-levin.png */,
+				3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */,
+				3BDBF4E513DFB2E300058C7C /* sean-hannity.png */,
+				3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */,
+				3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */,
+				3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */,
 			);
 			path = radioshows;
 			sourceTree = "<group>";
@@ -358,14 +358,6 @@
 				3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */,
 				3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */,
 				3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */,
-				3B6DD53B13DCAB7500400D86 /* coast-to-coast-am.jpeg in Resources */,
-				3B6DD53C13DCAB7500400D86 /* live-and-local.jpeg in Resources */,
-				3B6DD53D13DCAB7500400D86 /* mark-levin.jpeg in Resources */,
-				3B6DD53E13DCAB7500400D86 /* rush-limbaugh.jpeg in Resources */,
-				3B6DD53F13DCAB7500400D86 /* sean-hannity.jpeg in Resources */,
-				3B6DD54013DCAB7500400D86 /* the-dave-ramsey-show.jpeg in Resources */,
-				3B6DD54113DCAB7500400D86 /* the-kxnt-morning-news.jpeg in Resources */,
-				3B6DD54213DCAB7500400D86 /* wall-street-journal-this-morning.jpeg in Resources */,
 				3B6DD54413DCC23B00400D86 /* envelope.png in Resources */,
 				3B6DD54813DCCBFD00400D86 /* loading-flare.png in Resources */,
 				3BE538DC13DE69F400D5A010 /* Default.png in Resources */,
@@ -376,6 +368,14 @@
 				3BE538E613DE6A2C00D5A010 /* Icon-Small@2x.png in Resources */,
 				3BE538E813DE6AF100D5A010 /* nohrden-photo.png in Resources */,
 				3B0AD44813DFAD98003DD30C /* iTunesArtwork in Resources */,
+				3BDBF4E913DFB2E300058C7C /* coast-to-coast-am.png in Resources */,
+				3BDBF4EA13DFB2E300058C7C /* live-and-local.png in Resources */,
+				3BDBF4EB13DFB2E300058C7C /* mark-levin.png in Resources */,
+				3BDBF4EC13DFB2E300058C7C /* rush-limbaugh.png in Resources */,
+				3BDBF4ED13DFB2E300058C7C /* sean-hannity.png in Resources */,
+				3BDBF4EE13DFB2E300058C7C /* the-dave-ramsey-show.png in Resources */,
+				3BDBF4EF13DFB2E300058C7C /* the-kxnt-morning-news.png in Resources */,
+				3BDBF4F013DFB2E300058C7C /* wall-street-journal-this-morning.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

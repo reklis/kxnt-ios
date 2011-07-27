@@ -101,7 +101,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string type="base64-UTF8" key="IBUIText">U3RldmUgTm9ocmRlbiBMaXZlCjNwbSAtIDVwbSBvbiBTdW5kYXlzA</string>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Futura-CondensedExtraBold</string>
+							<string key="NSName">Futura-CondensedMedium</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -153,7 +153,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">coast-to-coast-am.jpeg</string>
+							<string key="NSResourceName">coast-to-coast-am.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="683636557">
@@ -168,7 +168,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">live-and-local.jpeg</string>
+							<string key="NSResourceName">live-and-local.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="233207287">
@@ -183,7 +183,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">mark-levin.jpeg</string>
+							<string key="NSResourceName">mark-levin.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="944412907">
@@ -198,7 +198,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">rush-limbaugh.jpeg</string>
+							<string key="NSResourceName">rush-limbaugh.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="171092059">
@@ -213,7 +213,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">sean-hannity.jpeg</string>
+							<string key="NSResourceName">sean-hannity.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="330563630">
@@ -228,7 +228,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">the-dave-ramsey-show.jpeg</string>
+							<string key="NSResourceName">the-dave-ramsey-show.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="430892677">
@@ -243,7 +243,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">the-kxnt-morning-news.jpeg</string>
+							<string key="NSResourceName">the-kxnt-morning-news.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="602727232">
@@ -258,7 +258,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">wall-street-journal-this-morning.jpeg</string>
+							<string key="NSResourceName">wall-street-journal-this-morning.png</string>
 						</object>
 					</object>
 				</object>
@@ -10566,22 +10566,22 @@ AAEAAQABA</bytes>
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>coast-to-coast-am.jpeg</string>
-				<string>live-and-local.jpeg</string>
-				<string>mark-levin.jpeg</string>
+				<string>coast-to-coast-am.png</string>
+				<string>live-and-local.png</string>
+				<string>mark-levin.png</string>
 				<string>nohrden-photo.png</string>
-				<string>rush-limbaugh.jpeg</string>
-				<string>sean-hannity.jpeg</string>
-				<string>the-dave-ramsey-show.jpeg</string>
-				<string>the-kxnt-morning-news.jpeg</string>
-				<string>wall-street-journal-this-morning.jpeg</string>
+				<string>rush-limbaugh.png</string>
+				<string>sean-hannity.png</string>
+				<string>the-dave-ramsey-show.png</string>
+				<string>the-kxnt-morning-news.png</string>
+				<string>wall-street-journal-this-morning.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>
-				<string>{320, 213}</string>
+				<string>{213, 213}</string>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>
