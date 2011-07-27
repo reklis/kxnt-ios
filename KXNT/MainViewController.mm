@@ -233,7 +233,10 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
                               forState:UIControlStateNormal];
         
-        [lvlMeter setAq: [streamer audioQueue]];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [lvlMeter setHidden:NO];
+            [lvlMeter setAq: [streamer audioQueue]];
+        });
 	}
 	else if ([streamer isIdle])
 	{
