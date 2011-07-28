@@ -74,10 +74,10 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     }
     
     // setup the level meters
-    UIColor *bgColor = [[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5];
+    UIColor* bgColor = [[[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5] autorelease];
     [lvlMeter setBackgroundColor:bgColor];
-    [lvlMeter setBorderColor:bgColor];
-    [bgColor release];
+    [lvlMeter setBorderColor:[UIColor blackColor]];
+    
     [lvlMeter setVertical:YES];
     [lvlMeter setRefreshHz:1./60.];
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
@@ -105,7 +105,9 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void) enterForground
 {
-    [lvlMeter setHidden:NO];
+    if ([streamer isPlaying]) {
+        [lvlMeter setHidden:NO];
+    }
 }
 
 #pragma mark Background Audio Controls
@@ -237,12 +239,17 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         [nowPlayingBanner setAlpha:0.];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [nowPlayingBanner setHidden:NO];
+            [lvlMeter setHidden:NO];
+            
             [UIView animateWithDuration:.25
                              animations:^(void) {
                                  [nowPlayingBanner setAlpha:1.];
                              }];
+            [UIView animateWithDuration:1
+                             animations:^(void) {
+                                 [lvlMeter setAlpha:1.];
+                             }];
             
-            [lvlMeter setHidden:NO];
             [lvlMeter setAq: [streamer audioQueue]];
         });
 	}
@@ -272,6 +279,11 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         
         [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
                               forState:UIControlStateNormal];
+        
+        [UIView animateWithDuration:1
+                         animations:^(void) {
+                             [lvlMeter setAlpha:0.];
+                         }];
 	}
 }
 
