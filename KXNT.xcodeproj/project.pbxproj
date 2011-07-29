@@ -43,6 +43,7 @@
 		3B86F7FA13DBC87C00B9C7A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */; };
 		3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FB13DBCC3800B9C7A2 /* loading.png */; };
 		3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FD13DBCE7A00B9C7A2 /* pause.png */; };
+		3BD27BF313E25729000AE4D5 /* kxnt-newsradio-logo-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */; };
 		3BDBF4E913DFB2E300058C7C /* coast-to-coast-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */; };
 		3BDBF4EA13DFB2E300058C7C /* live-and-local.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E213DFB2E300058C7C /* live-and-local.png */; };
 		3BDBF4EB13DFB2E300058C7C /* mark-levin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E313DFB2E300058C7C /* mark-levin.png */; };
@@ -114,6 +115,7 @@
 		3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B86F7FB13DBCC3800B9C7A2 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		3B86F7FD13DBCE7A00B9C7A2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kxnt-newsradio-logo-big.png"; sourceTree = "<group>"; };
 		3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coast-to-coast-am.png"; sourceTree = "<group>"; };
 		3BDBF4E213DFB2E300058C7C /* live-and-local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live-and-local.png"; sourceTree = "<group>"; };
 		3BDBF4E313DFB2E300058C7C /* mark-levin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mark-levin.png"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				3B86F7FD13DBCE7A00B9C7A2 /* pause.png */,
 				3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */,
 				3BE538E713DE6AF100D5A010 /* nohrden-photo.png */,
+				3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				3BDBF4EE13DFB2E300058C7C /* the-dave-ramsey-show.png in Resources */,
 				3BDBF4EF13DFB2E300058C7C /* the-kxnt-morning-news.png in Resources */,
 				3BDBF4F013DFB2E300058C7C /* wall-street-journal-this-morning.png in Resources */,
+				3BD27BF313E25729000AE4D5 /* kxnt-newsradio-logo-big.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

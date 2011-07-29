@@ -103,7 +103,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">nohrden-metal.png</string>
+							<string key="NSResourceName">kxnt-newsradio-logo-big.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="76078663">
@@ -569,16 +569,16 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>Default.png</string>
 				<string>envelope.png</string>
+				<string>kxnt-newsradio-logo-big.png</string>
 				<string>loading-flare.png</string>
-				<string>nohrden-metal.png</string>
 				<string>play.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{320, 480}</string>
 				<string>{24, 16}</string>
+				<string>{250, 158}</string>
 				<string>{114, 114}</string>
-				<string>{420, 162}</string>
 				<string>{114, 114}</string>
 			</object>
 		</object>
