@@ -181,7 +181,7 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 		if (_useGL) newMeter = [[GLLevelMeter alloc] initWithFrame:fr];
 		else newMeter = [[LevelMeter alloc] initWithFrame:fr];
 		
-		newMeter.numLights = 30;
+		newMeter.numLights = 20;
 		newMeter.vertical = self.vertical;
 		newMeter.bgColor = _bgColor;
 		newMeter.borderColor = _borderColor;
