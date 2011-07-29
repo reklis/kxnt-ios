@@ -152,7 +152,7 @@
 					<object class="IBUILabel" id="233597712">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{20, 290}, {280, 22}}</string>
+						<string key="NSFrame">{{20, 290}, {669, 22}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="207209155"/>
@@ -161,7 +161,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Now Playing: KXNT NewsRadio 100.5 FM</string>
+						<string key="IBUIText">Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>

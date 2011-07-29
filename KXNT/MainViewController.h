@@ -20,6 +20,7 @@
     UILabel *nowPlayingBanner;
     UIImageView *loadingFlare;
     NSTimer* loadingTimer;
+    NSTimer* scrollingTimer;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;

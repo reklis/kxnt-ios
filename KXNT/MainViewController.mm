@@ -40,13 +40,18 @@
 
 static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
 static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
+//static NSString* streamDescription = @"CBS News Radio KXNT 100.5FM covering Las Vegas Metropolitan area";
 
 @interface MainViewController(Private)
 
 - (void)destroyStreamer;
 - (void)createStreamer;
 - (void)playbackStateChanged:(NSNotification *)aNotification;
+- (void)handleWaitingState;
+- (void)handlePlayingState;
+- (void)handleIdleState;
 - (void)rotateLoadingFlare:(NSTimer*)timer;
+- (void)scrollNowPlayingBanner:(NSTimer*)timer;
 @end
 
 
@@ -63,6 +68,8 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    scrollingTimer = nil;
     
     // hide the loading flare until the user taps play
     [loadingFlare setAlpha:0];
@@ -112,8 +119,8 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 #pragma mark Background Audio Controls
 
-- (void) viewDidAppear: (BOOL) animated {
-    
+- (void) viewDidAppear: (BOOL) animated
+{
     [super viewDidAppear: animated];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
@@ -134,8 +141,8 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     }
 }
 
-- (void) viewWillDisppear: (BOOL) animated {
-    
+- (void) viewWillDisppear: (BOOL) animated
+{
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [self resignFirstResponder];
     
@@ -198,98 +205,132 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)playbackStateChanged:(NSNotification *)aNotification
 {
-	if ([streamer isWaiting])
-	{
-        [lvlMeter setAq: nil];
-        
-        [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
-                              forState:UIControlStateNormal];
-        
-        if (!loadingTimer) {
-            loadingTimer = [[NSTimer alloc] initWithFireDate:[NSDate date]
-                                                    interval:1./60.
-                                                      target:self
-                                                    selector:@selector(rotateLoadingFlare:)
-                                                    userInfo:nil
-                                                     repeats:YES];
-            [[NSRunLoop mainRunLoop] addTimer:loadingTimer
-                                      forMode:NSDefaultRunLoopMode];
-        }
-        
-        [UIView animateWithDuration:.3
-                         animations:^(void) {
-                             [self.loadingFlare setAlpha:1.];
-                         }];
-    }
-	else if ([streamer isPlaying])
-	{
-        [UIView animateWithDuration:.3
-                         animations:^(void) {
-                             [self.loadingFlare setAlpha:0.];
-                         }
-                         completion:^(BOOL finished) {
-                             [loadingTimer invalidate];
-                             [loadingTimer release];
-                             loadingTimer = nil;
-                         }];
-        
-        [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
-                              forState:UIControlStateNormal];
-        
-        [nowPlayingBanner setAlpha:0.];
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            [nowPlayingBanner setHidden:NO];
-            [lvlMeter setHidden:NO];
-            
-            [UIView animateWithDuration:.25
-                             animations:^(void) {
-                                 [nowPlayingBanner setAlpha:1.];
-                             }];
-            [UIView animateWithDuration:1
-                             animations:^(void) {
-                                 [lvlMeter setAlpha:1.];
-                             }];
-            
-            [lvlMeter setAq: [streamer audioQueue]];
-        });
+	if ([streamer isWaiting]) {
+        [self handleWaitingState];
+    } else if ([streamer isPlaying]) {
+        [self handlePlayingState];
+	} else if ([streamer isIdle]) {
+        [self handleIdleState];
 	}
-	else if ([streamer isIdle])
-	{
-        [nowPlayingBanner setAlpha:1.];
+}
+
+- (void)handleIdleState
+{
+    [nowPlayingBanner setAlpha:1.];
+    [UIView animateWithDuration:.25
+                     animations:^(void) {
+                         [nowPlayingBanner setAlpha:0.];
+                     }
+                     completion:^(BOOL finished) {
+                         //[nowPlayingBanner setHidden:YES];
+                     }];
+    
+    [UIView animateWithDuration:.3
+                     animations:^(void) {
+                         [self.loadingFlare setAlpha:0.];
+                     }
+                     completion:^(BOOL finished) {
+                         [loadingTimer invalidate];
+                         [loadingTimer release];
+                         loadingTimer = nil;
+                     }];
+    
+    [lvlMeter setAq: nil];
+    [self destroyStreamer];
+    
+    [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
+                          forState:UIControlStateNormal];
+    
+    [UIView animateWithDuration:1
+                     animations:^(void) {
+                         [lvlMeter setAlpha:0.];
+                     }];
+}
+
+- (void)handlePlayingState
+{
+    [UIView animateWithDuration:.3
+                     animations:^(void) {
+                         [self.loadingFlare setAlpha:0.];
+                     }
+                     completion:^(BOOL finished) {
+                         [loadingTimer invalidate];
+                         [loadingTimer release];
+                         loadingTimer = nil;
+                     }];
+    
+    [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
+                          forState:UIControlStateNormal];
+    
+    [nowPlayingBanner setAlpha:0.];
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        [nowPlayingBanner setHidden:NO];
+        [lvlMeter setHidden:NO];
+        
         [UIView animateWithDuration:.25
                          animations:^(void) {
-                             [nowPlayingBanner setAlpha:0.];
-                         }
-                         completion:^(BOOL finished) {
-                             //[nowPlayingBanner setHidden:YES];
+                             [nowPlayingBanner setAlpha:1.];
                          }];
-        
-        [UIView animateWithDuration:.3
-                         animations:^(void) {
-                             [self.loadingFlare setAlpha:0.];
-                         }
-                         completion:^(BOOL finished) {
-                             [loadingTimer invalidate];
-                             [loadingTimer release];
-                             loadingTimer = nil;
-                         }];
-
-        [lvlMeter setAq: nil];
-		[self destroyStreamer];
-        
-        [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
-                              forState:UIControlStateNormal];
-        
         [UIView animateWithDuration:1
                          animations:^(void) {
-                             [lvlMeter setAlpha:0.];
+                             [lvlMeter setAlpha:1.];
                          }];
-	}
+        
+        [lvlMeter setAq: [streamer audioQueue]];
+        
+        if (!scrollingTimer) {
+            scrollingTimer = [[NSTimer alloc] initWithFireDate:[NSDate date]
+                                                      interval:1./60.
+                                                        target:self
+                                                      selector:@selector(scrollNowPlayingBanner:)
+                                                      userInfo:nil
+                                                       repeats:YES];
+            [[NSRunLoop mainRunLoop] addTimer:scrollingTimer
+                                      forMode:NSDefaultRunLoopMode];
+        }
+    });
+}
+
+- (void)handleWaitingState
+{
+    [lvlMeter setAq: nil];
+    
+    [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
+                          forState:UIControlStateNormal];
+    
+    if (!loadingTimer) {
+        loadingTimer = [[NSTimer alloc] initWithFireDate:[NSDate date]
+                                                interval:1./60.
+                                                  target:self
+                                                selector:@selector(rotateLoadingFlare:)
+                                                userInfo:nil
+                                                 repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:loadingTimer
+                                  forMode:NSDefaultRunLoopMode];
+    }
+    
+    [UIView animateWithDuration:.3
+                     animations:^(void) {
+                         [self.loadingFlare setAlpha:1.];
+                     }];
 }
 
 - (void)rotateLoadingFlare:(NSTimer *)timer
 {
     self.loadingFlare.transform = CGAffineTransformRotate(self.loadingFlare.transform, .1);
+}
+
+- (void)scrollNowPlayingBanner:(NSTimer*)timer
+{
+    //CGRect windowRect = self.view.window.bounds;
+    //CGFloat windowWidth = CGRectGetWidth(windowRect);
+    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
+    CGRect bannerRect = self.nowPlayingBanner.bounds;
+    CGFloat bannerWidth = CGRectGetWidth(bannerRect);
+    if (t.tx < bannerWidth*-1) {
+        t = CGAffineTransformTranslate(t, bannerWidth*2, 0);
+    }
+    self.nowPlayingBanner.transform = t;
 }
 
 #pragma mark FlipsideViewControllerDelegate
@@ -328,10 +369,17 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)viewDidUnload
 {
+    [super viewDidUnload];
+    [scrollingTimer invalidate];
+    [scrollingTimer release];
+    scrollingTimer = nil;
+    
+    [loadingTimer invalidate];
+    [loadingTimer release];
+    loadingTimer = nil;
+    
     [self setLoadingFlare:nil];
     [self setNowPlayingBanner:nil];
-    [super viewDidUnload];
-
     [self setComposeMessageButton:nil];
     [self setPlayPauseButton:nil];
     [self setLvlMeter:nil];
@@ -339,6 +387,8 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)dealloc
 {
+    [scrollingTimer invalidate];
+    [scrollingTimer release];
     [loadingTimer invalidate];
     [loadingTimer release];
     [composeMessageButton release];
