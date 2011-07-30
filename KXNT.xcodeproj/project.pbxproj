@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3B0AD44813DFAD98003DD30C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AD44713DFAD98003DD30C /* iTunesArtwork */; };
+		3B6C75C413E478AC005766E8 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758013E478AC005766E8 /* AudioStreamer.m */; };
+		3B6C75C513E478AC005766E8 /* AQLevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758313E478AC005766E8 /* AQLevelMeter.mm */; };
+		3B6C75C613E478AC005766E8 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758513E478AC005766E8 /* GLLevelMeter.m */; };
+		3B6C75C713E478AC005766E8 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758713E478AC005766E8 /* LevelMeter.m */; };
+		3B6C75C813E478AC005766E8 /* LevelView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758913E478AC005766E8 /* LevelView.mm */; };
+		3B6C75C913E478AC005766E8 /* MeterTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758B13E478AC005766E8 /* MeterTable.mm */; };
+		3B6C75CA13E478AC005766E8 /* CADebugMacros.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758E13E478AC005766E8 /* CADebugMacros.mm */; };
+		3B6C75CB13E478AC005766E8 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758F13E478AC005766E8 /* CADebugPrintf.cpp */; };
+		3B6C75CC13E478AC005766E8 /* CAStreamBasicDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C759313E478AC005766E8 /* CAStreamBasicDescription.mm */; };
+		3B6C75CD13E478AC005766E8 /* CAXException.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C759513E478AC005766E8 /* CAXException.mm */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
@@ -23,20 +33,10 @@
 		3B86F7A413DBB83200B9C7A2 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7A313DBB83200B9C7A2 /* MainView.xib */; };
 		3B86F7A713DBB83200B9C7A2 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7A613DBB83200B9C7A2 /* FlipsideViewController.m */; };
 		3B86F7A913DBB83200B9C7A2 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7A813DBB83200B9C7A2 /* FlipsideView.xib */; };
-		3B86F7CA13DBBBA500B9C7A2 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7B113DBBBA500B9C7A2 /* AudioStreamer.m */; };
-		3B86F7CC13DBBBA500B9C7A2 /* AQLevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7B613DBBBA500B9C7A2 /* AQLevelMeter.mm */; };
-		3B86F7CD13DBBBA500B9C7A2 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7B813DBBBA500B9C7A2 /* GLLevelMeter.m */; };
-		3B86F7CE13DBBBA500B9C7A2 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7BA13DBBBA500B9C7A2 /* LevelMeter.m */; };
-		3B86F7CF13DBBBA500B9C7A2 /* LevelView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7BC13DBBBA500B9C7A2 /* LevelView.mm */; };
-		3B86F7D013DBBBA500B9C7A2 /* MeterTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7BE13DBBBA500B9C7A2 /* MeterTable.mm */; };
-		3B86F7D313DBBBA500B9C7A2 /* CADebugMacros.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7C413DBBBA500B9C7A2 /* CADebugMacros.mm */; };
-		3B86F7D413DBBBA500B9C7A2 /* CAStreamBasicDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7C713DBBBA500B9C7A2 /* CAStreamBasicDescription.mm */; };
-		3B86F7D513DBBBA500B9C7A2 /* CAXException.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7C913DBBBA500B9C7A2 /* CAXException.mm */; };
 		3B86F7DB13DBBEF700B9C7A2 /* nohrden-metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */; };
 		3B86F7DD13DBC2EB00B9C7A2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7DC13DBC2EB00B9C7A2 /* play.png */; };
 		3B86F7E113DBC6D400B9C7A2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7E013DBC6D400B9C7A2 /* CoreAudio.framework */; };
 		3B86F7E313DBC6DA00B9C7A2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7E213DBC6DA00B9C7A2 /* OpenGLES.framework */; };
-		3B86F7E613DBC79800B9C7A2 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B86F7E413DBC79800B9C7A2 /* CADebugPrintf.cpp */; };
 		3B86F7E813DBC7D000B9C7A2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7E713DBC7D000B9C7A2 /* CFNetwork.framework */; };
 		3B86F7F613DBC85C00B9C7A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F513DBC85C00B9C7A2 /* AudioToolbox.framework */; };
 		3B86F7F813DBC86F00B9C7A2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */; };
@@ -63,6 +63,27 @@
 
 /* Begin PBXFileReference section */
 		3B0AD44713DFAD98003DD30C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		3B6C757F13E478AC005766E8 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		3B6C758013E478AC005766E8 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		3B6C758213E478AC005766E8 /* AQLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQLevelMeter.h; sourceTree = "<group>"; };
+		3B6C758313E478AC005766E8 /* AQLevelMeter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AQLevelMeter.mm; sourceTree = "<group>"; };
+		3B6C758413E478AC005766E8 /* GLLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLevelMeter.h; sourceTree = "<group>"; };
+		3B6C758513E478AC005766E8 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
+		3B6C758613E478AC005766E8 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
+		3B6C758713E478AC005766E8 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		3B6C758813E478AC005766E8 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
+		3B6C758913E478AC005766E8 /* LevelView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelView.mm; sourceTree = "<group>"; };
+		3B6C758A13E478AC005766E8 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
+		3B6C758B13E478AC005766E8 /* MeterTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MeterTable.mm; sourceTree = "<group>"; };
+		3B6C758D13E478AC005766E8 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		3B6C758E13E478AC005766E8 /* CADebugMacros.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CADebugMacros.mm; sourceTree = "<group>"; };
+		3B6C758F13E478AC005766E8 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		3B6C759013E478AC005766E8 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		3B6C759113E478AC005766E8 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		3B6C759213E478AC005766E8 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		3B6C759313E478AC005766E8 /* CAStreamBasicDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAStreamBasicDescription.mm; sourceTree = "<group>"; };
+		3B6C759413E478AC005766E8 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		3B6C759513E478AC005766E8 /* CAXException.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAXException.mm; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -84,31 +105,10 @@
 		3B86F7A513DBB83200B9C7A2 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		3B86F7A613DBB83200B9C7A2 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		3B86F7A813DBB83200B9C7A2 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
-		3B86F7B013DBBBA500B9C7A2 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
-		3B86F7B113DBBBA500B9C7A2 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
-		3B86F7B513DBBBA500B9C7A2 /* AQLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQLevelMeter.h; sourceTree = "<group>"; };
-		3B86F7B613DBBBA500B9C7A2 /* AQLevelMeter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AQLevelMeter.mm; sourceTree = "<group>"; };
-		3B86F7B713DBBBA500B9C7A2 /* GLLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLevelMeter.h; sourceTree = "<group>"; };
-		3B86F7B813DBBBA500B9C7A2 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
-		3B86F7B913DBBBA500B9C7A2 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
-		3B86F7BA13DBBBA500B9C7A2 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
-		3B86F7BB13DBBBA500B9C7A2 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
-		3B86F7BC13DBBBA500B9C7A2 /* LevelView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelView.mm; sourceTree = "<group>"; };
-		3B86F7BD13DBBBA500B9C7A2 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
-		3B86F7BE13DBBBA500B9C7A2 /* MeterTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MeterTable.mm; sourceTree = "<group>"; };
-		3B86F7C313DBBBA500B9C7A2 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
-		3B86F7C413DBBBA500B9C7A2 /* CADebugMacros.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CADebugMacros.mm; sourceTree = "<group>"; };
-		3B86F7C513DBBBA500B9C7A2 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
-		3B86F7C613DBBBA500B9C7A2 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
-		3B86F7C713DBBBA500B9C7A2 /* CAStreamBasicDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAStreamBasicDescription.mm; sourceTree = "<group>"; };
-		3B86F7C813DBBBA500B9C7A2 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
-		3B86F7C913DBBBA500B9C7A2 /* CAXException.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CAXException.mm; sourceTree = "<group>"; };
 		3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nohrden-metal.png"; sourceTree = "<group>"; };
 		3B86F7DC13DBC2EB00B9C7A2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		3B86F7E013DBC6D400B9C7A2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		3B86F7E213DBC6DA00B9C7A2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		3B86F7E413DBC79800B9C7A2 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
-		3B86F7E513DBC79800B9C7A2 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
 		3B86F7E713DBC7D000B9C7A2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3B86F7F513DBC85C00B9C7A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -154,6 +154,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B6C752D13E478AB005766E8 /* audiostreamingkit */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C757E13E478AC005766E8 /* AudioStreamer */,
+				3B6C758113E478AC005766E8 /* AudioViews */,
+				3B6C758C13E478AC005766E8 /* iPublicUtility */,
+			);
+			name = audiostreamingkit;
+			path = ../audiostreamingkit;
+			sourceTree = "<group>";
+		};
+		3B6C757E13E478AC005766E8 /* AudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C757F13E478AC005766E8 /* AudioStreamer.h */,
+				3B6C758013E478AC005766E8 /* AudioStreamer.m */,
+			);
+			path = AudioStreamer;
+			sourceTree = "<group>";
+		};
+		3B6C758113E478AC005766E8 /* AudioViews */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C758213E478AC005766E8 /* AQLevelMeter.h */,
+				3B6C758313E478AC005766E8 /* AQLevelMeter.mm */,
+				3B6C758413E478AC005766E8 /* GLLevelMeter.h */,
+				3B6C758513E478AC005766E8 /* GLLevelMeter.m */,
+				3B6C758613E478AC005766E8 /* LevelMeter.h */,
+				3B6C758713E478AC005766E8 /* LevelMeter.m */,
+				3B6C758813E478AC005766E8 /* LevelView.h */,
+				3B6C758913E478AC005766E8 /* LevelView.mm */,
+				3B6C758A13E478AC005766E8 /* MeterTable.h */,
+				3B6C758B13E478AC005766E8 /* MeterTable.mm */,
+			);
+			path = AudioViews;
+			sourceTree = "<group>";
+		};
+		3B6C758C13E478AC005766E8 /* iPublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C758D13E478AC005766E8 /* CADebugMacros.h */,
+				3B6C758E13E478AC005766E8 /* CADebugMacros.mm */,
+				3B6C758F13E478AC005766E8 /* CADebugPrintf.cpp */,
+				3B6C759013E478AC005766E8 /* CADebugPrintf.h */,
+				3B6C759113E478AC005766E8 /* CAMath.h */,
+				3B6C759213E478AC005766E8 /* CAStreamBasicDescription.h */,
+				3B6C759313E478AC005766E8 /* CAStreamBasicDescription.mm */,
+				3B6C759413E478AC005766E8 /* CAXException.h */,
+				3B6C759513E478AC005766E8 /* CAXException.mm */,
+			);
+			path = iPublicUtility;
+			sourceTree = "<group>";
+		};
 		3B6DD53213DCAB7500400D86 /* radioshows */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +249,7 @@
 		3B86F78A13DBB83200B9C7A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B6C752D13E478AB005766E8 /* audiostreamingkit */,
 				3B6DD54513DCC3FE00400D86 /* MessageUI.framework */,
 				3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */,
 				3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */,
@@ -213,9 +267,6 @@
 		3B86F79113DBB83200B9C7A2 /* KXNT */ = {
 			isa = PBXGroup;
 			children = (
-				3B86F7AF13DBBBA500B9C7A2 /* AudioStreamer */,
-				3B86F7B413DBBBA500B9C7A2 /* AudioViews */,
-				3B86F7C213DBBBA500B9C7A2 /* iPublicUtility */,
 				3B86F79A13DBB83200B9C7A2 /* KXNTAppDelegate.h */,
 				3B86F79B13DBB83200B9C7A2 /* KXNTAppDelegate.mm */,
 				3B86F79D13DBB83200B9C7A2 /* MainWindow.xib */,
@@ -243,32 +294,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B86F7AF13DBBBA500B9C7A2 /* AudioStreamer */ = {
-			isa = PBXGroup;
-			children = (
-				3B86F7B013DBBBA500B9C7A2 /* AudioStreamer.h */,
-				3B86F7B113DBBBA500B9C7A2 /* AudioStreamer.m */,
-			);
-			path = AudioStreamer;
-			sourceTree = "<group>";
-		};
-		3B86F7B413DBBBA500B9C7A2 /* AudioViews */ = {
-			isa = PBXGroup;
-			children = (
-				3B86F7B513DBBBA500B9C7A2 /* AQLevelMeter.h */,
-				3B86F7B613DBBBA500B9C7A2 /* AQLevelMeter.mm */,
-				3B86F7B713DBBBA500B9C7A2 /* GLLevelMeter.h */,
-				3B86F7B813DBBBA500B9C7A2 /* GLLevelMeter.m */,
-				3B86F7B913DBBBA500B9C7A2 /* LevelMeter.h */,
-				3B86F7BA13DBBBA500B9C7A2 /* LevelMeter.m */,
-				3B86F7BB13DBBBA500B9C7A2 /* LevelView.h */,
-				3B86F7BC13DBBBA500B9C7A2 /* LevelView.mm */,
-				3B86F7BD13DBBBA500B9C7A2 /* MeterTable.h */,
-				3B86F7BE13DBBBA500B9C7A2 /* MeterTable.mm */,
-			);
-			path = AudioViews;
-			sourceTree = "<group>";
-		};
 		3B86F7BF13DBBBA500B9C7A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,22 +308,6 @@
 				3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		3B86F7C213DBBBA500B9C7A2 /* iPublicUtility */ = {
-			isa = PBXGroup;
-			children = (
-				3B86F7E513DBC79800B9C7A2 /* CADebugPrintf.h */,
-				3B86F7E413DBC79800B9C7A2 /* CADebugPrintf.cpp */,
-				3B86F7C313DBBBA500B9C7A2 /* CADebugMacros.h */,
-				3B86F7C413DBBBA500B9C7A2 /* CADebugMacros.mm */,
-				3B86F7C513DBBBA500B9C7A2 /* CAMath.h */,
-				3B86F7C613DBBBA500B9C7A2 /* CAStreamBasicDescription.h */,
-				3B86F7C713DBBBA500B9C7A2 /* CAStreamBasicDescription.mm */,
-				3B86F7C813DBBBA500B9C7A2 /* CAXException.h */,
-				3B86F7C913DBBBA500B9C7A2 /* CAXException.mm */,
-			);
-			path = iPublicUtility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,16 +403,16 @@
 				3B86F79C13DBB83200B9C7A2 /* KXNTAppDelegate.mm in Sources */,
 				3B86F7A213DBB83200B9C7A2 /* MainViewController.mm in Sources */,
 				3B86F7A713DBB83200B9C7A2 /* FlipsideViewController.m in Sources */,
-				3B86F7CA13DBBBA500B9C7A2 /* AudioStreamer.m in Sources */,
-				3B86F7CC13DBBBA500B9C7A2 /* AQLevelMeter.mm in Sources */,
-				3B86F7CD13DBBBA500B9C7A2 /* GLLevelMeter.m in Sources */,
-				3B86F7CE13DBBBA500B9C7A2 /* LevelMeter.m in Sources */,
-				3B86F7CF13DBBBA500B9C7A2 /* LevelView.mm in Sources */,
-				3B86F7D013DBBBA500B9C7A2 /* MeterTable.mm in Sources */,
-				3B86F7D313DBBBA500B9C7A2 /* CADebugMacros.mm in Sources */,
-				3B86F7D413DBBBA500B9C7A2 /* CAStreamBasicDescription.mm in Sources */,
-				3B86F7D513DBBBA500B9C7A2 /* CAXException.mm in Sources */,
-				3B86F7E613DBC79800B9C7A2 /* CADebugPrintf.cpp in Sources */,
+				3B6C75C413E478AC005766E8 /* AudioStreamer.m in Sources */,
+				3B6C75C513E478AC005766E8 /* AQLevelMeter.mm in Sources */,
+				3B6C75C613E478AC005766E8 /* GLLevelMeter.m in Sources */,
+				3B6C75C713E478AC005766E8 /* LevelMeter.m in Sources */,
+				3B6C75C813E478AC005766E8 /* LevelView.mm in Sources */,
+				3B6C75C913E478AC005766E8 /* MeterTable.mm in Sources */,
+				3B6C75CA13E478AC005766E8 /* CADebugMacros.mm in Sources */,
+				3B6C75CB13E478AC005766E8 /* CADebugPrintf.cpp in Sources */,
+				3B6C75CC13E478AC005766E8 /* CAStreamBasicDescription.mm in Sources */,
+				3B6C75CD13E478AC005766E8 /* CAXException.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
