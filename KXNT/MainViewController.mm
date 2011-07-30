@@ -38,6 +38,7 @@
  Version=2
  */
 
+//static NSString* streamHome = @"http://www.kxnt.com";
 static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
 static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 //static NSString* streamDescription = @"CBS News Radio KXNT 100.5FM covering Las Vegas Metropolitan area";
@@ -59,6 +60,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 @synthesize lvlMeter;
 @synthesize loadingFlare;
+@synthesize logoImage;
 @synthesize composeMessageButton;
 @synthesize nowPlayingBanner;
 @synthesize playPauseButton;
@@ -88,6 +90,9 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [lvlMeter setVertical:YES];
     [lvlMeter setRefreshHz:1./60.];
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
+    
+//    UITapGestureRecognizer* singleTapGesture = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showSite:)] autorelease];
+//    [logoImage addGestureRecognizer:singleTapGesture];
 }
 
 - (IBAction)playPause:(id)sender
@@ -116,6 +121,14 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
         [lvlMeter setHidden:NO];
     }
 }
+
+//- (void)showSite:(id)sender
+//{
+//    NSURL* streamHomeUrl = [NSURL URLWithString:streamHome];
+//    if ([[UIApplication sharedApplication] canOpenURL:streamHomeUrl]) {
+//        [[UIApplication sharedApplication] openURL:streamHomeUrl];
+//    }
+//}
 
 #pragma mark Background Audio Controls
 
@@ -369,7 +382,13 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
+    [self setLoadingFlare:nil];
+    [self setNowPlayingBanner:nil];
+    [self setComposeMessageButton:nil];
+    [self setPlayPauseButton:nil];
+    [self setLvlMeter:nil];
+    [self setLogoImage:nil];
+        
     [scrollingTimer invalidate];
     [scrollingTimer release];
     scrollingTimer = nil;
@@ -378,11 +397,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [loadingTimer release];
     loadingTimer = nil;
     
-    [self setLoadingFlare:nil];
-    [self setNowPlayingBanner:nil];
-    [self setComposeMessageButton:nil];
-    [self setPlayPauseButton:nil];
-    [self setLvlMeter:nil];
+    [super viewDidUnload];
 }
 
 - (void)dealloc
@@ -396,6 +411,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [lvlMeter release];
     [loadingFlare release];
     [nowPlayingBanner release];
+    [logoImage release];
     [super dealloc];
 }
 

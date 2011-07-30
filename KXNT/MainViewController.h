@@ -19,6 +19,7 @@
     UIButton *composeMessageButton;
     UILabel *nowPlayingBanner;
     UIImageView *loadingFlare;
+    UIImageView *logoImage;
     NSTimer* loadingTimer;
     NSTimer* scrollingTimer;
 }
@@ -29,10 +30,12 @@
 @property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
 @property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
 @property (nonatomic, retain) IBOutlet UIImageView *loadingFlare;
+@property (nonatomic, retain) IBOutlet UIImageView *logoImage;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;
 - (IBAction)composeMessage:(id)sender;
+//- (IBAction)showSite:(id)sender;
 
 - (void) enterBackground;
 - (void) enterForground;

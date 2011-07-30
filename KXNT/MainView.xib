@@ -66,6 +66,7 @@
 						<string key="NSFrame">{{282, 421}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -310,6 +311,14 @@
 					</object>
 					<int key="connectionID">55</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">logoImage</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="956659419"/>
+					</object>
+					<int key="connectionID">56</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -436,7 +445,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">55</int>
+			<int key="maxID">56</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -459,9 +468,11 @@
 							<string>composeMessage:</string>
 							<string>playPause:</string>
 							<string>showInfo:</string>
+							<string>showSite:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -474,6 +485,7 @@
 							<string>composeMessage:</string>
 							<string>playPause:</string>
 							<string>showInfo:</string>
+							<string>showSite:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -489,6 +501,10 @@
 								<string key="name">showInfo:</string>
 								<string key="candidateClassName">id</string>
 							</object>
+							<object class="IBActionInfo">
+								<string key="name">showSite:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -497,6 +513,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>composeMessageButton</string>
 							<string>loadingFlare</string>
+							<string>logoImage</string>
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
@@ -504,6 +521,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
+							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>AQLevelMeter</string>
 							<string>UILabel</string>
@@ -516,6 +534,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>composeMessageButton</string>
 							<string>loadingFlare</string>
+							<string>logoImage</string>
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
@@ -528,6 +547,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">loadingFlare</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">logoImage</string>
 								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
