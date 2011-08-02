@@ -13,7 +13,7 @@
 		3B6C75C613E478AC005766E8 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758513E478AC005766E8 /* GLLevelMeter.m */; };
 		3B6C75C713E478AC005766E8 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758713E478AC005766E8 /* LevelMeter.m */; };
 		3B6C75C813E478AC005766E8 /* LevelView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758913E478AC005766E8 /* LevelView.mm */; };
-		3B6C75C913E478AC005766E8 /* MeterTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758B13E478AC005766E8 /* MeterTable.mm */; };
+		3B6C75C913E478AC005766E8 /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758B13E478AC005766E8 /* MeterTable.cpp */; };
 		3B6C75CA13E478AC005766E8 /* CADebugMacros.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758E13E478AC005766E8 /* CADebugMacros.mm */; };
 		3B6C75CB13E478AC005766E8 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C758F13E478AC005766E8 /* CADebugPrintf.cpp */; };
 		3B6C75CC13E478AC005766E8 /* CAStreamBasicDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C759313E478AC005766E8 /* CAStreamBasicDescription.mm */; };
@@ -74,7 +74,7 @@
 		3B6C758813E478AC005766E8 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
 		3B6C758913E478AC005766E8 /* LevelView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LevelView.mm; sourceTree = "<group>"; };
 		3B6C758A13E478AC005766E8 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
-		3B6C758B13E478AC005766E8 /* MeterTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MeterTable.mm; sourceTree = "<group>"; };
+		3B6C758B13E478AC005766E8 /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeterTable.cpp; sourceTree = "<group>"; };
 		3B6C758D13E478AC005766E8 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
 		3B6C758E13E478AC005766E8 /* CADebugMacros.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CADebugMacros.mm; sourceTree = "<group>"; };
 		3B6C758F13E478AC005766E8 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				3B6C758813E478AC005766E8 /* LevelView.h */,
 				3B6C758913E478AC005766E8 /* LevelView.mm */,
 				3B6C758A13E478AC005766E8 /* MeterTable.h */,
-				3B6C758B13E478AC005766E8 /* MeterTable.mm */,
+				3B6C758B13E478AC005766E8 /* MeterTable.cpp */,
 			);
 			path = AudioViews;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 				3B6C75C613E478AC005766E8 /* GLLevelMeter.m in Sources */,
 				3B6C75C713E478AC005766E8 /* LevelMeter.m in Sources */,
 				3B6C75C813E478AC005766E8 /* LevelView.mm in Sources */,
-				3B6C75C913E478AC005766E8 /* MeterTable.mm in Sources */,
+				3B6C75C913E478AC005766E8 /* MeterTable.cpp in Sources */,
 				3B6C75CA13E478AC005766E8 /* CADebugMacros.mm in Sources */,
 				3B6C75CB13E478AC005766E8 /* CADebugPrintf.cpp in Sources */,
 				3B6C75CC13E478AC005766E8 /* CAStreamBasicDescription.mm in Sources */,
