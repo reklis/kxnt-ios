@@ -11,6 +11,7 @@
 #import "FlipsideViewController.h"
 #import "AQLevelMeter.h"
 #import "AudioStreamer.h"
+#import "TwitterFeed.h"
 
 @interface MainViewController : UIViewController
 <FlipsideViewControllerDelegate, MFMailComposeViewControllerDelegate>
@@ -22,6 +23,7 @@
     UIImageView *logoImage;
     NSTimer* loadingTimer;
     NSTimer* scrollingTimer;
+    TwitterFeed* twitter;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;

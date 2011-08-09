@@ -38,10 +38,20 @@
  Version=2
  */
 
+/*
+ // http://provisioning.streamtheworld.com/pls/KMXBFM.pls
+ 
+ File1=http://2453.live.streamtheworld.com:80/KMXBFM_SC
+ File2=http://2453.live.streamtheworld.com:3690/KMXBFM_SC
+ File3=http://2453.live.streamtheworld.com:443/KMXBFM_SC
+*/
+
 //static NSString* streamHome = @"http://www.kxnt.com";
 static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
+//static NSString* streamSource = @"http://2453.live.streamtheworld.com:443/KMXBFM_SC";
 static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
-//static NSString* streamDescription = @"CBS News Radio KXNT 100.5FM covering Las Vegas Metropolitan area";
+static NSString* streamDescription = @"Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area ";
+static NSString* streamTwitterAccount = @"kxntnewsradio";
 
 @interface MainViewController(Private)
 
@@ -64,7 +74,6 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 @synthesize composeMessageButton;
 @synthesize nowPlayingBanner;
 @synthesize playPauseButton;
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -137,10 +146,26 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [super viewDidAppear: animated];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
+    
+    if (!twitter) {
+        twitter = [[TwitterFeed alloc] init];
+    }
+    [twitter fetchLatestTweet:streamTwitterAccount
+                     callback:^(NSError *errorOrNil, NSString *tweetText) {
+                         if (nil == errorOrNil) {
+                             NSString* s = [streamDescription stringByAppendingString:tweetText];
+                             UIFont* f = self.nowPlayingBanner.font;
+                             CGSize size = [s sizeWithFont:f];
+                             CGRect newBounds = CGRectMake(0, 0, size.width, size.height);
+                             self.nowPlayingBanner.bounds = newBounds;
+                             self.nowPlayingBanner.text = s;
+                         } else {
+                             NSLog(@"%@", errorOrNil);
+                         }
+                     }];
 }
 
 - (BOOL) canBecomeFirstResponder {
-    
     return YES;
 }
 
@@ -335,13 +360,13 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 
 - (void)scrollNowPlayingBanner:(NSTimer*)timer
 {
-    //CGRect windowRect = self.view.window.bounds;
-    //CGFloat windowWidth = CGRectGetWidth(windowRect);
+    CGRect windowRect = self.view.window.bounds;
+    CGFloat windowWidth = CGRectGetWidth(windowRect);
     CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
     CGRect bannerRect = self.nowPlayingBanner.bounds;
     CGFloat bannerWidth = CGRectGetWidth(bannerRect);
-    if (t.tx < bannerWidth*-1) {
-        t = CGAffineTransformTranslate(t, bannerWidth*2, 0);
+    if (t.tx <= (bannerWidth*-.5)-(windowWidth*1.25)) {
+        t = CGAffineTransformTranslate(t, bannerWidth+windowWidth*1.25, 0);
     }
     self.nowPlayingBanner.transform = t;
 }
@@ -412,6 +437,7 @@ static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
     [loadingFlare release];
     [nowPlayingBanner release];
     [logoImage release];
+    [twitter release];
     [super dealloc];
 }
 
