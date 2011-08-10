@@ -56,21 +56,21 @@
 		3B86F7FC13DBCC3800B9C7A2 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FB13DBCC3800B9C7A2 /* loading.png */; };
 		3B86F7FE13DBCE7A00B9C7A2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B86F7FD13DBCE7A00B9C7A2 /* pause.png */; };
 		3BD27BF313E25729000AE4D5 /* kxnt-newsradio-logo-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */; };
-		3BDBF4E913DFB2E300058C7C /* coast-to-coast-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */; };
-		3BDBF4EA13DFB2E300058C7C /* live-and-local.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E213DFB2E300058C7C /* live-and-local.png */; };
-		3BDBF4EB13DFB2E300058C7C /* mark-levin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E313DFB2E300058C7C /* mark-levin.png */; };
-		3BDBF4EC13DFB2E300058C7C /* rush-limbaugh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */; };
-		3BDBF4ED13DFB2E300058C7C /* sean-hannity.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E513DFB2E300058C7C /* sean-hannity.png */; };
-		3BDBF4EE13DFB2E300058C7C /* the-dave-ramsey-show.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */; };
-		3BDBF4EF13DFB2E300058C7C /* the-kxnt-morning-news.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */; };
-		3BDBF4F013DFB2E300058C7C /* wall-street-journal-this-morning.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */; };
+		3BDBF4E913DFB2E300058C7C /* show1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E113DFB2E300058C7C /* show1.png */; };
+		3BDBF4EA13DFB2E300058C7C /* show2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E213DFB2E300058C7C /* show2.png */; };
+		3BDBF4EB13DFB2E300058C7C /* show3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E313DFB2E300058C7C /* show3.png */; };
+		3BDBF4EC13DFB2E300058C7C /* show4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E413DFB2E300058C7C /* show4.png */; };
+		3BDBF4ED13DFB2E300058C7C /* show5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E513DFB2E300058C7C /* show5.png */; };
+		3BDBF4EE13DFB2E300058C7C /* show6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E613DFB2E300058C7C /* show6.png */; };
+		3BDBF4EF13DFB2E300058C7C /* show7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E713DFB2E300058C7C /* show7.png */; };
+		3BDBF4F013DFB2E300058C7C /* show8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E813DFB2E300058C7C /* show8.png */; };
 		3BE538DC13DE69F400D5A010 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DB13DE69F400D5A010 /* Default.png */; };
 		3BE538DE13DE69F900D5A010 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DD13DE69F900D5A010 /* Default@2x.png */; };
 		3BE538E013DE6A0000D5A010 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538DF13DE6A0000D5A010 /* Icon.png */; };
 		3BE538E213DE6A0600D5A010 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538E113DE6A0600D5A010 /* Icon@2x.png */; };
 		3BE538E513DE6A2C00D5A010 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538E313DE6A2C00D5A010 /* Icon-Small.png */; };
 		3BE538E613DE6A2C00D5A010 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538E413DE6A2C00D5A010 /* Icon-Small@2x.png */; };
-		3BE538E813DE6AF100D5A010 /* nohrden-photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE538E713DE6AF100D5A010 /* nohrden-photo.png */; };
+		3BF730A413F23DF600761C24 /* headliner.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF730A313F23DF600761C24 /* headliner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,7 +125,7 @@
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B6DD54713DCCBFD00400D86 /* loading-flare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-flare.png"; sourceTree = "<group>"; };
-		3B86F78713DBB83200B9C7A2 /* KXNT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNTNewsRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,21 +153,21 @@
 		3B86F7FB13DBCC3800B9C7A2 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		3B86F7FD13DBCE7A00B9C7A2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kxnt-newsradio-logo-big.png"; sourceTree = "<group>"; };
-		3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coast-to-coast-am.png"; sourceTree = "<group>"; };
-		3BDBF4E213DFB2E300058C7C /* live-and-local.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live-and-local.png"; sourceTree = "<group>"; };
-		3BDBF4E313DFB2E300058C7C /* mark-levin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mark-levin.png"; sourceTree = "<group>"; };
-		3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rush-limbaugh.png"; sourceTree = "<group>"; };
-		3BDBF4E513DFB2E300058C7C /* sean-hannity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sean-hannity.png"; sourceTree = "<group>"; };
-		3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-dave-ramsey-show.png"; sourceTree = "<group>"; };
-		3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-kxnt-morning-news.png"; sourceTree = "<group>"; };
-		3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wall-street-journal-this-morning.png"; sourceTree = "<group>"; };
+		3BDBF4E113DFB2E300058C7C /* show1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show1.png; sourceTree = "<group>"; };
+		3BDBF4E213DFB2E300058C7C /* show2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show2.png; sourceTree = "<group>"; };
+		3BDBF4E313DFB2E300058C7C /* show3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show3.png; sourceTree = "<group>"; };
+		3BDBF4E413DFB2E300058C7C /* show4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show4.png; sourceTree = "<group>"; };
+		3BDBF4E513DFB2E300058C7C /* show5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show5.png; sourceTree = "<group>"; };
+		3BDBF4E613DFB2E300058C7C /* show6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show6.png; sourceTree = "<group>"; };
+		3BDBF4E713DFB2E300058C7C /* show7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show7.png; sourceTree = "<group>"; };
+		3BDBF4E813DFB2E300058C7C /* show8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show8.png; sourceTree = "<group>"; };
 		3BE538DB13DE69F400D5A010 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3BE538DD13DE69F900D5A010 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3BE538DF13DE6A0000D5A010 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3BE538E113DE6A0600D5A010 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3BE538E313DE6A2C00D5A010 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		3BE538E413DE6A2C00D5A010 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		3BE538E713DE6AF100D5A010 /* nohrden-photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nohrden-photo.png"; sourceTree = "<group>"; };
+		3BF730A313F23DF600761C24 /* headliner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headliner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,14 +286,15 @@
 		3B6DD53213DCAB7500400D86 /* radioshows */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBF4E113DFB2E300058C7C /* coast-to-coast-am.png */,
-				3BDBF4E213DFB2E300058C7C /* live-and-local.png */,
-				3BDBF4E313DFB2E300058C7C /* mark-levin.png */,
-				3BDBF4E413DFB2E300058C7C /* rush-limbaugh.png */,
-				3BDBF4E513DFB2E300058C7C /* sean-hannity.png */,
-				3BDBF4E613DFB2E300058C7C /* the-dave-ramsey-show.png */,
-				3BDBF4E713DFB2E300058C7C /* the-kxnt-morning-news.png */,
-				3BDBF4E813DFB2E300058C7C /* wall-street-journal-this-morning.png */,
+				3BF730A313F23DF600761C24 /* headliner.png */,
+				3BDBF4E113DFB2E300058C7C /* show1.png */,
+				3BDBF4E213DFB2E300058C7C /* show2.png */,
+				3BDBF4E313DFB2E300058C7C /* show3.png */,
+				3BDBF4E413DFB2E300058C7C /* show4.png */,
+				3BDBF4E513DFB2E300058C7C /* show5.png */,
+				3BDBF4E613DFB2E300058C7C /* show6.png */,
+				3BDBF4E713DFB2E300058C7C /* show7.png */,
+				3BDBF4E813DFB2E300058C7C /* show8.png */,
 			);
 			path = radioshows;
 			sourceTree = "<group>";
@@ -317,7 +318,7 @@
 		3B86F78813DBB83200B9C7A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B86F78713DBB83200B9C7A2 /* KXNT.app */,
+				3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,7 +383,6 @@
 				3B86F7DC13DBC2EB00B9C7A2 /* play.png */,
 				3B86F7FD13DBCE7A00B9C7A2 /* pause.png */,
 				3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */,
-				3BE538E713DE6AF100D5A010 /* nohrden-photo.png */,
 				3BD27BF213E25729000AE4D5 /* kxnt-newsradio-logo-big.png */,
 			);
 			path = Images;
@@ -391,9 +391,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B86F78613DBB83200B9C7A2 /* KXNT */ = {
+		3B86F78613DBB83200B9C7A2 /* KXNTNewsRadio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B86F7AC13DBB83200B9C7A2 /* Build configuration list for PBXNativeTarget "KXNT" */;
+			buildConfigurationList = 3B86F7AC13DBB83200B9C7A2 /* Build configuration list for PBXNativeTarget "KXNTNewsRadio" */;
 			buildPhases = (
 				3B86F78313DBB83200B9C7A2 /* Sources */,
 				3B86F78413DBB83200B9C7A2 /* Frameworks */,
@@ -403,9 +403,9 @@
 			);
 			dependencies = (
 			);
-			name = KXNT;
+			name = KXNTNewsRadio;
 			productName = KXNT;
-			productReference = 3B86F78713DBB83200B9C7A2 /* KXNT.app */;
+			productReference = 3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -429,7 +429,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B86F78613DBB83200B9C7A2 /* KXNT */,
+				3B86F78613DBB83200B9C7A2 /* KXNTNewsRadio */,
 			);
 		};
 /* End PBXProject section */
@@ -456,17 +456,17 @@
 				3BE538E213DE6A0600D5A010 /* Icon@2x.png in Resources */,
 				3BE538E513DE6A2C00D5A010 /* Icon-Small.png in Resources */,
 				3BE538E613DE6A2C00D5A010 /* Icon-Small@2x.png in Resources */,
-				3BE538E813DE6AF100D5A010 /* nohrden-photo.png in Resources */,
 				3B0AD44813DFAD98003DD30C /* iTunesArtwork in Resources */,
-				3BDBF4E913DFB2E300058C7C /* coast-to-coast-am.png in Resources */,
-				3BDBF4EA13DFB2E300058C7C /* live-and-local.png in Resources */,
-				3BDBF4EB13DFB2E300058C7C /* mark-levin.png in Resources */,
-				3BDBF4EC13DFB2E300058C7C /* rush-limbaugh.png in Resources */,
-				3BDBF4ED13DFB2E300058C7C /* sean-hannity.png in Resources */,
-				3BDBF4EE13DFB2E300058C7C /* the-dave-ramsey-show.png in Resources */,
-				3BDBF4EF13DFB2E300058C7C /* the-kxnt-morning-news.png in Resources */,
-				3BDBF4F013DFB2E300058C7C /* wall-street-journal-this-morning.png in Resources */,
+				3BDBF4E913DFB2E300058C7C /* show1.png in Resources */,
+				3BDBF4EA13DFB2E300058C7C /* show2.png in Resources */,
+				3BDBF4EB13DFB2E300058C7C /* show3.png in Resources */,
+				3BDBF4EC13DFB2E300058C7C /* show4.png in Resources */,
+				3BDBF4ED13DFB2E300058C7C /* show5.png in Resources */,
+				3BDBF4EE13DFB2E300058C7C /* show6.png in Resources */,
+				3BDBF4EF13DFB2E300058C7C /* show7.png in Resources */,
+				3BDBF4F013DFB2E300058C7C /* show8.png in Resources */,
 				3BD27BF313E25729000AE4D5 /* kxnt-newsradio-logo-big.png in Resources */,
+				3BF730A413F23DF600761C24 /* headliner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B86F7AC13DBB83200B9C7A2 /* Build configuration list for PBXNativeTarget "KXNT" */ = {
+		3B86F7AC13DBB83200B9C7A2 /* Build configuration list for PBXNativeTarget "KXNTNewsRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B86F7AD13DBB83200B9C7A2 /* Debug */,
