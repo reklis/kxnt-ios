@@ -47,7 +47,8 @@
 */
 
 //static NSString* streamHome = @"http://www.kxnt.com";
-static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
+static NSString* streamPlaylist = @"http://provisioning.streamtheworld.com/pls/KXNTAM.pls";
+//static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
 //static NSString* streamSource = @"http://2453.live.streamtheworld.com:443/KMXBFM_SC";
 static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
 static NSString* streamDescription = @"Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area ";
@@ -55,14 +56,21 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 
 @interface MainViewController(Private)
 
-- (void)destroyStreamer;
-- (void)createStreamer;
-- (void)playbackStateChanged:(NSNotification *)aNotification;
-- (void)handleWaitingState;
-- (void)handlePlayingState;
-- (void)handleIdleState;
-- (void)rotateLoadingFlare:(NSTimer*)timer;
-- (void)scrollNowPlayingBanner:(NSTimer*)timer;
+- (void) beginStreaming;
+- (void) discoverStreamSource;
+- (void) createStreamer;
+- (void) destroyStreamer;
+
+- (void) playbackStateChanged:(NSNotification *)aNotification;
+- (void) handleWaitingState;
+- (void) handlePlayingState;
+- (void) handleIdleState;
+
+- (void) rotateLoadingFlare:(NSTimer*)timer;
+- (void) scrollNowPlayingBanner:(NSTimer*)timer;
+- (void) fetchLatestTweet;
+- (void) showAlert:(NSString*)title message:(NSString*)message;
+
 @end
 
 
@@ -74,8 +82,8 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 @synthesize composeMessageButton;
 @synthesize nowPlayingBanner;
 @synthesize playPauseButton;
+@synthesize streamSource;
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -99,19 +107,16 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     [lvlMeter setVertical:YES];
     [lvlMeter setRefreshHz:1./60.];
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
-    
-//    UITapGestureRecognizer* singleTapGesture = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showSite:)] autorelease];
-//    [logoImage addGestureRecognizer:singleTapGesture];
 }
 
 - (IBAction)playPause:(id)sender
 {
     if ([self.playPauseButton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]])
 	{		
-		[self createStreamer];
         [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
                               forState:UIControlStateNormal];
-		[streamer start];
+        
+        [self beginStreaming];
 	}
 	else
 	{
@@ -131,22 +136,8 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     }
 }
 
-//- (void)showSite:(id)sender
-//{
-//    NSURL* streamHomeUrl = [NSURL URLWithString:streamHome];
-//    if ([[UIApplication sharedApplication] canOpenURL:streamHomeUrl]) {
-//        [[UIApplication sharedApplication] openURL:streamHomeUrl];
-//    }
-//}
-
-#pragma mark Background Audio Controls
-
-- (void) viewDidAppear: (BOOL) animated
+- (void)fetchLatestTweet
 {
-    [super viewDidAppear: animated];
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    [self becomeFirstResponder];
-    
     if (!twitter) {
         twitter = [[TwitterFeed alloc] init];
     }
@@ -163,6 +154,32 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
                              NSLog(@"%@", errorOrNil);
                          }
                      }];
+}
+
+- (void)showAlert:(NSString *)title message:(NSString *)message
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:title
+                                                     message:message
+                                                    delegate:self
+                                           cancelButtonTitle:NSLocalizedString(@"OK", @"")
+                                           otherButtonTitles: nil]
+                            autorelease];
+    
+    [alert performSelector:@selector(show)
+                  onThread:[NSThread mainThread]
+                withObject:nil
+             waitUntilDone:NO];
+}
+
+#pragma mark Background Audio Controls
+
+- (void) viewDidAppear: (BOOL) animated
+{
+    [super viewDidAppear: animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    
+    [self fetchLatestTweet];
 }
 
 - (BOOL) canBecomeFirstResponder {
@@ -189,7 +206,6 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 
 #pragma mark MFMailComposeViewControllerDelegate
 
-
 - (IBAction)composeMessage:(id)sender
 {
     MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
@@ -207,6 +223,79 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 }
 
 #pragma mark AudioStreamer Notifications
+
+- (void)beginStreaming
+{
+    if (self.streamSource) {
+        [self createStreamer];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [streamer start];
+        });
+    } else {
+        [self discoverStreamSource];
+    }
+}
+
+- (void) discoverStreamSource
+{
+    dispatch_queue_t q = dispatch_queue_create("com.cibotechnology.beginstreaming", nil);
+    dispatch_async(q, ^(void) {
+        NSURL* plsUrl = [NSURL URLWithString:streamPlaylist];
+        
+        NSError* err = nil;
+        NSString* pls = [NSString stringWithContentsOfURL:plsUrl
+                                                 encoding:NSUTF8StringEncoding
+                                                    error:&err];
+        if (err) {
+            NSLog(@"Error loading %@: %@", plsUrl, err);
+            
+            NSString* title = NSLocalizedStringFromTable(@"LoadError", @"Errors", @"Load failure alert title");
+            NSString* message = NSLocalizedStringFromTable(@"PlaylistFailedToLoad", @"Errors", @"Failed to load .pls file from provisioning portal message");
+            [self showAlert:title message:message];
+        } else {
+            @try {
+                NSScanner* scanner = [NSScanner scannerWithString:pls];
+                NSMutableDictionary* sources = [NSMutableDictionary dictionary];
+                NSString* cr = @"\r\n";
+                NSString* kvpSeparator = @"=";
+                NSString* playlistHeader = @"[playlist]\r\n";
+                [scanner scanString:playlistHeader intoString:NULL];
+                while (![scanner isAtEnd]) {
+                    NSString* k;
+                    [scanner scanUpToString:kvpSeparator intoString:&k];
+                    [scanner scanString:kvpSeparator intoString:NULL];
+                    NSString* v;
+                    [scanner scanUpToString:cr intoString:&v];
+                    [scanner scanString:cr intoString:NULL];
+                    
+                    if (v && k) {
+                        [sources setObject:v forKey:k];
+                    }
+                }
+                
+                NSLog(@"%@ => %@", plsUrl, sources);
+                
+                if ([[sources allKeys] containsObject:@"File1"]) {
+                    self.streamSource = [sources objectForKey:@"File1"];
+                    [self createStreamer];
+                    dispatch_async(dispatch_get_main_queue(), ^(void) {
+                        [streamer start];
+                    });
+                } else {
+                    NSString* title = NSLocalizedStringFromTable(@"ScannerError", @"Errors", @"Scanner failure alert title");
+                    NSString* message = NSLocalizedStringFromTable(@"ScannerErrorMessage", @"Errors", @"Failed to scan .pls file from provisioning portal");
+                    [self showAlert:title message:message];
+                }
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Exception while parsing PLS: %@", exception);
+                NSString* title = NSLocalizedStringFromTable(@"ScannerError", @"Errors", @"Scanner failure alert title");
+                NSString* message = NSLocalizedStringFromTable(@"ScannerErrorMessage", @"Errors", @"Failed to scan .pls file from provisioning portal");
+                [self showAlert:title message:message];
+            }
+        }
+    });
+}
 
 - (void)destroyStreamer
 {
@@ -413,6 +502,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     [self setPlayPauseButton:nil];
     [self setLvlMeter:nil];
     [self setLogoImage:nil];
+    [self setStreamSource:nil];
         
     [scrollingTimer invalidate];
     [scrollingTimer release];
@@ -438,6 +528,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     [nowPlayingBanner release];
     [logoImage release];
     [twitter release];
+    [streamSource release];
     [super dealloc];
 }
 

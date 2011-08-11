@@ -1,2 +1,6 @@
 "File Error" = "Feed Error";
 "Unable to configure network read stream." =  "Live Radio Stream appears down, try again later";
+"PlaylistFailedToLoad" = "Playlist failed to load, try again later";
+"LoadError" = "Loading Error";
+"ScannerError" = "Playlist unreadable";
+"ScannerErrorMessage" = "Playlist could not be read, try again later";
