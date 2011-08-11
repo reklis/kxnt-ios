@@ -30,6 +30,7 @@
 		3B48764F13F0E05C001E87A4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48764313F0E05C001E87A4 /* SBJsonUTF8Stream.m */; };
 		3B48765013F0E05C001E87A4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48764513F0E05C001E87A4 /* SBJsonWriter.m */; };
 		3B48765313F0E0BB001E87A4 /* TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48765213F0E0BB001E87A4 /* TwitterFeed.m */; };
+		3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC39513F358370050431B /* MainView~iPad.xib */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
@@ -122,6 +123,7 @@
 		3B48764513F0E05C001E87A4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		3B48765113F0E0BB001E87A4 /* TwitterFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFeed.h; sourceTree = "<group>"; };
 		3B48765213F0E0BB001E87A4 /* TwitterFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeed.m; sourceTree = "<group>"; };
+		3B5CC39513F358370050431B /* MainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView~iPad.xib"; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF730AF13F2433D00761C24 /* MainWindow-iPad.xib */,
+				3B5CC39513F358370050431B /* MainView~iPad.xib */,
 			);
 			name = iPad;
 			path = ..;
@@ -480,6 +483,7 @@
 				3BD27BF313E25729000AE4D5 /* kxnt-newsradio-logo-big.png in Resources */,
 				3BF730A413F23DF600761C24 /* headliner.png in Resources */,
 				3BF730B113F2433D00761C24 /* MainWindow-iPad.xib in Resources */,
+				3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
