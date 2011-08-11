@@ -125,7 +125,7 @@
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B6DD54713DCCBFD00400D86 /* loading-flare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-flare.png"; sourceTree = "<group>"; };
-		3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNTNewsRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kxntnewsradio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -318,7 +318,7 @@
 		3B86F78813DBB83200B9C7A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */,
+				3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 			);
 			name = KXNTNewsRadio;
 			productName = KXNT;
-			productReference = 3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */;
+			productReference = 3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -577,7 +577,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KXNT/KXNT-Prefix.pch";
 				INFOPLIST_FILE = "KXNT/KXNT-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = kxntnewsradio;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -590,7 +590,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KXNT/KXNT-Prefix.pch";
 				INFOPLIST_FILE = "KXNT/KXNT-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = kxntnewsradio;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
