@@ -33,7 +33,9 @@
 @property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
 @property (nonatomic, retain) IBOutlet UIImageView *loadingFlare;
 @property (nonatomic, retain) IBOutlet UIImageView *logoImage;
-@property (nonatomic, retain) IBOutlet NSString* streamSource;
+
+@property (nonatomic, retain) NSString* streamSource;
+@property (nonatomic, retain) NSDictionary* radioConfig;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;

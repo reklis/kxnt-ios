@@ -31,6 +31,7 @@
 		3B48765013F0E05C001E87A4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48764513F0E05C001E87A4 /* SBJsonWriter.m */; };
 		3B48765313F0E0BB001E87A4 /* TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48765213F0E0BB001E87A4 /* TwitterFeed.m */; };
 		3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC39513F358370050431B /* MainView~iPad.xib */; };
+		3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC3A013F36AFD0050431B /* RadioConfig.plist */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
@@ -124,11 +125,12 @@
 		3B48765113F0E0BB001E87A4 /* TwitterFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFeed.h; sourceTree = "<group>"; };
 		3B48765213F0E0BB001E87A4 /* TwitterFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeed.m; sourceTree = "<group>"; };
 		3B5CC39513F358370050431B /* MainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView~iPad.xib"; sourceTree = "<group>"; };
+		3B5CC3A013F36AFD0050431B /* RadioConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RadioConfig.plist; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B6DD54713DCCBFD00400D86 /* loading-flare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-flare.png"; sourceTree = "<group>"; };
-		3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kxntnewsradio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXNTNewsRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86F78B13DBB83200B9C7A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B86F78D13DBB83200B9C7A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B86F78F13DBB83200B9C7A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -322,7 +324,7 @@
 		3B86F78813DBB83200B9C7A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */,
+				3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,6 +376,7 @@
 				3B86F79713DBB83200B9C7A2 /* KXNT-Prefix.pch */,
 				3B86F79813DBB83200B9C7A2 /* main.m */,
 				3B6DD52C13DC77A000400D86 /* Errors.strings */,
+				3B5CC3A013F36AFD0050431B /* RadioConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -420,7 +423,7 @@
 			);
 			name = KXNTNewsRadio;
 			productName = KXNT;
-			productReference = 3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */;
+			productReference = 3B86F78713DBB83200B9C7A2 /* KXNTNewsRadio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -484,6 +487,7 @@
 				3BF730A413F23DF600761C24 /* headliner.png in Resources */,
 				3BF730B113F2433D00761C24 /* MainWindow-iPad.xib in Resources */,
 				3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */,
+				3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,50 +9,15 @@
 #import "MainViewController.h"
 
 /*
- 
  // http://provisioning.streamtheworld.com/pls/KXNTAM.pls
- 
- [playlist]
- File1=http://4553.live.streamtheworld.com:80/KXNTAM_SC
- File2=http://4553.live.streamtheworld.com:3690/KXNTAM_SC
- File3=http://4553.live.streamtheworld.com:443/KXNTAM_SC
- File4=http://4723.live.streamtheworld.com:80/KXNTAM_SC
- File5=http://4723.live.streamtheworld.com:3690/KXNTAM_SC
- File6=http://4723.live.streamtheworld.com:443/KXNTAM_SC
- File7=http://4693.live.streamtheworld.com:80/KXNTAM_SC
- File8=http://4693.live.streamtheworld.com:3690/KXNTAM_SC
- File9=http://4693.live.streamtheworld.com:443/KXNTAM_SC
- File10=http://1331.live.streamtheworld.com:80/KXNTAM_SC
- File11=http://1331.live.streamtheworld.com:3690/KXNTAM_SC
- File12=http://1331.live.streamtheworld.com:443/KXNTAM_SC
- File13=http://4983.live.streamtheworld.com:80/KXNTAM_SC
- File14=http://4983.live.streamtheworld.com:3690/KXNTAM_SC
- File15=http://4983.live.streamtheworld.com:443/KXNTAM_SC
- File16=http://4583.live.streamtheworld.com:80/KXNTAM_SC
- File17=http://4583.live.streamtheworld.com:3690/KXNTAM_SC
- File18=http://4583.live.streamtheworld.com:443/KXNTAM_SC
- Title1=KXNTAM_SC
- Title2=KXNTAM_SC-Bak
- Length1=-1
- NumberOfEntries=18
- Version=2
- */
-
-/*
  // http://provisioning.streamtheworld.com/pls/KMXBFM.pls
- 
- File1=http://2453.live.streamtheworld.com:80/KMXBFM_SC
- File2=http://2453.live.streamtheworld.com:3690/KMXBFM_SC
- File3=http://2453.live.streamtheworld.com:443/KMXBFM_SC
 */
 
-//static NSString* streamHome = @"http://www.kxnt.com";
-static NSString* streamPlaylist = @"http://provisioning.streamtheworld.com/pls/KXNTAM.pls";
-//static NSString* streamSource = @"http://4583.live.streamtheworld.com:80/KXNTAMAAC_SC";
-//static NSString* streamSource = @"http://2453.live.streamtheworld.com:443/KMXBFM_SC";
-static NSString* streamEmailContact = @"steve@stevenohrdenlive.com";
-static NSString* streamDescription = @"Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area ";
-static NSString* streamTwitterAccount = @"kxntnewsradio";
+#define kHomepageKey @"homepage"
+#define kContactKey @"contact"
+#define kSourceKey @"source"
+#define kDescriptionKey @"description"
+#define kTwitterKey @"twitteraccount"
 
 @interface MainViewController(Private)
 
@@ -83,10 +48,15 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 @synthesize nowPlayingBanner;
 @synthesize playPauseButton;
 @synthesize streamSource;
+@synthesize radioConfig;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString* configPath = [[[NSBundle mainBundle] pathForResource:@"RadioConfig" ofType:@"plist"] stringByExpandingTildeInPath];
+    self.radioConfig = [NSDictionary dictionaryWithContentsOfFile:configPath];
+    NSLog(@"Radio Configuration: %@", radioConfig);
     
     scrollingTimer = nil;
     
@@ -138,12 +108,14 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 
 - (void)fetchLatestTweet
 {
+    NSString* streamTwitterAccount = [self.radioConfig objectForKey:kTwitterKey];
     if (!twitter) {
         twitter = [[TwitterFeed alloc] init];
     }
     [twitter fetchLatestTweet:streamTwitterAccount
                      callback:^(NSError *errorOrNil, NSString *tweetText) {
                          if (nil == errorOrNil) {
+                             NSString* streamDescription = [self.radioConfig objectForKey:kDescriptionKey];
                              NSString* s = [streamDescription stringByAppendingString:tweetText];
                              UIFont* f = self.nowPlayingBanner.font;
                              CGSize size = [s sizeWithFont:f];
@@ -208,6 +180,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 
 - (IBAction)composeMessage:(id)sender
 {
+    NSString* streamEmailContact = [self.radioConfig objectForKey:kContactKey];
     MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
     [mailComposer setToRecipients:[NSArray arrayWithObject:streamEmailContact]];
     [mailComposer setSubject:@"Steve Nohrden Live!"];
@@ -240,6 +213,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
 {
     dispatch_queue_t q = dispatch_queue_create("com.cibotechnology.beginstreaming", nil);
     dispatch_async(q, ^(void) {
+        NSString* streamPlaylist = [self.radioConfig objectForKey:kSourceKey];
         NSURL* plsUrl = [NSURL URLWithString:streamPlaylist];
         
         NSError* err = nil;
@@ -252,6 +226,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
             NSString* title = NSLocalizedStringFromTable(@"LoadError", @"Errors", @"Load failure alert title");
             NSString* message = NSLocalizedStringFromTable(@"PlaylistFailedToLoad", @"Errors", @"Failed to load .pls file from provisioning portal message");
             [self showAlert:title message:message];
+            [self handleIdleState];
         } else {
             @try {
                 NSScanner* scanner = [NSScanner scannerWithString:pls];
@@ -285,6 +260,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
                     NSString* title = NSLocalizedStringFromTable(@"ScannerError", @"Errors", @"Scanner failure alert title");
                     NSString* message = NSLocalizedStringFromTable(@"ScannerErrorMessage", @"Errors", @"Failed to scan .pls file from provisioning portal");
                     [self showAlert:title message:message];
+                    [self handleIdleState];
                 }
             }
             @catch (NSException *exception) {
@@ -292,6 +268,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
                 NSString* title = NSLocalizedStringFromTable(@"ScannerError", @"Errors", @"Scanner failure alert title");
                 NSString* message = NSLocalizedStringFromTable(@"ScannerErrorMessage", @"Errors", @"Failed to scan .pls file from provisioning portal");
                 [self showAlert:title message:message];
+                [self handleIdleState];
             }
         }
     });
@@ -503,6 +480,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     [self setLvlMeter:nil];
     [self setLogoImage:nil];
     [self setStreamSource:nil];
+    [self setRadioConfig:nil];
         
     [scrollingTimer invalidate];
     [scrollingTimer release];
@@ -529,6 +507,7 @@ static NSString* streamTwitterAccount = @"kxntnewsradio";
     [logoImage release];
     [twitter release];
     [streamSource release];
+    [radioConfig release];
     [super dealloc];
 }
 

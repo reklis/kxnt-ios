@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>homepage</key>
+	<string>http://www.kxnt.com</string>
+	<key>contact</key>
+	<string>steve@stevenohrdenlive.com</string>
+	<key>source</key>
+	<string>http://provisioning.streamtheworld.com/pls/KXNTAM.pls</string>
+	<key>description</key>
+	<string>Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area </string>
+	<key>twitteraccount</key>
+	<string>kxntnewsradio</string>
+</dict>
+</plist>
