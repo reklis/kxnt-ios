@@ -40,9 +40,9 @@
 
 
 @implementation MainViewController
+@synthesize loadingIndicator;
 
 @synthesize lvlMeter;
-@synthesize loadingFlare;
 @synthesize logoImage;
 @synthesize composeMessageButton;
 @synthesize nowPlayingBanner;
@@ -59,10 +59,6 @@
     NSLog(@"Radio Configuration: %@", radioConfig);
     
     scrollingTimer = nil;
-    
-    // hide the loading flare until the user taps play
-    [loadingFlare setAlpha:0];
-    loadingTimer = nil;
     
     // hide the mail button on devices that don't have mail installed
     if (![MFMailComposeViewController canSendMail]) {
@@ -329,15 +325,7 @@
                          //[nowPlayingBanner setHidden:YES];
                      }];
     
-    [UIView animateWithDuration:.3
-                     animations:^(void) {
-                         [self.loadingFlare setAlpha:0.];
-                     }
-                     completion:^(BOOL finished) {
-                         [loadingTimer invalidate];
-                         [loadingTimer release];
-                         loadingTimer = nil;
-                     }];
+    [self.loadingIndicator stopAnimating];
     
     [lvlMeter setAq: nil];
     [self destroyStreamer];
@@ -353,15 +341,7 @@
 
 - (void)handlePlayingState
 {
-    [UIView animateWithDuration:.3
-                     animations:^(void) {
-                         [self.loadingFlare setAlpha:0.];
-                     }
-                     completion:^(BOOL finished) {
-                         [loadingTimer invalidate];
-                         [loadingTimer release];
-                         loadingTimer = nil;
-                     }];
+    [self.loadingIndicator stopAnimating];
     
     [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
                           forState:UIControlStateNormal];
@@ -402,26 +382,7 @@
     [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
                           forState:UIControlStateNormal];
     
-    if (!loadingTimer) {
-        loadingTimer = [[NSTimer alloc] initWithFireDate:[NSDate date]
-                                                interval:1./60.
-                                                  target:self
-                                                selector:@selector(rotateLoadingFlare:)
-                                                userInfo:nil
-                                                 repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:loadingTimer
-                                  forMode:NSDefaultRunLoopMode];
-    }
-    
-    [UIView animateWithDuration:.3
-                     animations:^(void) {
-                         [self.loadingFlare setAlpha:1.];
-                     }];
-}
-
-- (void)rotateLoadingFlare:(NSTimer *)timer
-{
-    self.loadingFlare.transform = CGAffineTransformRotate(self.loadingFlare.transform, .1);
+    [self.loadingIndicator startAnimating];
 }
 
 - (void)scrollNowPlayingBanner:(NSTimer*)timer
@@ -473,7 +434,6 @@
 
 - (void)viewDidUnload
 {
-    [self setLoadingFlare:nil];
     [self setNowPlayingBanner:nil];
     [self setComposeMessageButton:nil];
     [self setPlayPauseButton:nil];
@@ -486,10 +446,7 @@
     [scrollingTimer release];
     scrollingTimer = nil;
     
-    [loadingTimer invalidate];
-    [loadingTimer release];
-    loadingTimer = nil;
-    
+    [self setLoadingIndicator:nil];
     [super viewDidUnload];
 }
 
@@ -497,17 +454,15 @@
 {
     [scrollingTimer invalidate];
     [scrollingTimer release];
-    [loadingTimer invalidate];
-    [loadingTimer release];
     [composeMessageButton release];
     [playPauseButton release];
     [lvlMeter release];
-    [loadingFlare release];
     [nowPlayingBanner release];
     [logoImage release];
     [twitter release];
     [streamSource release];
     [radioConfig release];
+    [loadingIndicator release];
     [super dealloc];
 }
 

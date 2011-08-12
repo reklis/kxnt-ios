@@ -19,11 +19,10 @@
     AudioStreamer* streamer;
     UIButton *composeMessageButton;
     UILabel *nowPlayingBanner;
-    UIImageView *loadingFlare;
     UIImageView *logoImage;
-    NSTimer* loadingTimer;
     NSTimer* scrollingTimer;
     TwitterFeed* twitter;
+    UIActivityIndicatorView *loadingIndicator;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;
@@ -31,8 +30,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *nowPlayingBanner;
 @property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
 @property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
-@property (nonatomic, retain) IBOutlet UIImageView *loadingFlare;
 @property (nonatomic, retain) IBOutlet UIImageView *logoImage;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *loadingIndicator;
 
 @property (nonatomic, retain) NSString* streamSource;
 @property (nonatomic, retain) NSDictionary* radioConfig;
