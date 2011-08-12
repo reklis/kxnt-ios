@@ -32,6 +32,7 @@
 		3B48765313F0E0BB001E87A4 /* TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48765213F0E0BB001E87A4 /* TwitterFeed.m */; };
 		3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC39513F358370050431B /* MainView~iPad.xib */; };
 		3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC3A013F36AFD0050431B /* RadioConfig.plist */; };
+		3B5CC3B413F4B30D0050431B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC3B313F4B30D0050431B /* Entitlements.plist */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B6DD54413DCC23B00400D86 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD54313DCC23B00400D86 /* envelope.png */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
@@ -124,8 +125,9 @@
 		3B48764513F0E05C001E87A4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		3B48765113F0E0BB001E87A4 /* TwitterFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFeed.h; sourceTree = "<group>"; };
 		3B48765213F0E0BB001E87A4 /* TwitterFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeed.m; sourceTree = "<group>"; };
-		3B5CC39513F358370050431B /* MainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView~iPad.xib"; sourceTree = "<group>"; };
+		3B5CC39513F358370050431B /* MainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainView~iPad.xib"; path = "KXNT/en.lproj/MainView~iPad.xib"; sourceTree = "<group>"; };
 		3B5CC3A013F36AFD0050431B /* RadioConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RadioConfig.plist; sourceTree = "<group>"; };
+		3B5CC3B313F4B30D0050431B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B6DD54313DCC23B00400D86 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -143,10 +145,10 @@
 		3B86F79E13DBB83200B9C7A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		3B86F7A013DBB83200B9C7A2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3B86F7A113DBB83200B9C7A2 /* MainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
-		3B86F7A313DBB83200B9C7A2 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		3B86F7A313DBB83200B9C7A2 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView.xib; path = en.lproj/MainView.xib; sourceTree = "<group>"; };
 		3B86F7A513DBB83200B9C7A2 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		3B86F7A613DBB83200B9C7A2 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
-		3B86F7A813DBB83200B9C7A2 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+		3B86F7A813DBB83200B9C7A2 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FlipsideView.xib; path = en.lproj/FlipsideView.xib; sourceTree = "<group>"; };
 		3B86F7DA13DBBEF700B9C7A2 /* nohrden-metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nohrden-metal.png"; sourceTree = "<group>"; };
 		3B86F7DC13DBC2EB00B9C7A2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		3B86F7E013DBC6D400B9C7A2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -377,6 +379,7 @@
 				3B86F79813DBB83200B9C7A2 /* main.m */,
 				3B6DD52C13DC77A000400D86 /* Errors.strings */,
 				3B5CC3A013F36AFD0050431B /* RadioConfig.plist */,
+				3B5CC3B313F4B30D0050431B /* Entitlements.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				3BF730B113F2433D00761C24 /* MainWindow-iPad.xib in Resources */,
 				3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */,
 				3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */,
+				3B5CC3B413F4B30D0050431B /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
