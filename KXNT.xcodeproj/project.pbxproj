@@ -32,8 +32,6 @@
 		3B3EE35313F4D1BB0093C9F8 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE32D13F4D1BB0093C9F8 /* mask.png */; };
 		3B3EE35413F4D1BB0093C9F8 /* mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE32E13F4D1BB0093C9F8 /* mask@2x.png */; };
 		3B3EE35513F4D1BB0093C9F8 /* mask~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE32F13F4D1BB0093C9F8 /* mask~ipad.png */; };
-		3B3EE35613F4D1BB0093C9F8 /* mock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE33013F4D1BB0093C9F8 /* mock@2x.png */; };
-		3B3EE35713F4D1BB0093C9F8 /* mock~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE33113F4D1BB0093C9F8 /* mock~ipad.png */; };
 		3B3EE35813F4D1BB0093C9F8 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE33213F4D1BB0093C9F8 /* pause.png */; };
 		3B3EE35913F4D1BB0093C9F8 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE33313F4D1BB0093C9F8 /* pause@2x.png */; };
 		3B3EE35A13F4D1BB0093C9F8 /* pause~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE33413F4D1BB0093C9F8 /* pause~ipad.png */; };
@@ -56,7 +54,6 @@
 		3B3EE38113F4F47F0093C9F8 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE37E13F4F47F0093C9F8 /* Default-Portrait~ipad.png */; };
 		3B3EE38213F4F47F0093C9F8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE37F13F4F47F0093C9F8 /* Default.png */; };
 		3B3EE38313F4F47F0093C9F8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE38013F4F47F0093C9F8 /* Default@2x.png */; };
-		3B3EE38513F4F5C70093C9F8 /* txtMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3EE38413F4F5C70093C9F8 /* txtMask.png */; };
 		3B48762413F0E038001E87A4 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4875D613F0E038001E87A4 /* AudioStreamer.m */; };
 		3B48762513F0E038001E87A4 /* AQLevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B4875D913F0E038001E87A4 /* AQLevelMeter.mm */; };
 		3B48762613F0E038001E87A4 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4875DB13F0E038001E87A4 /* GLLevelMeter.m */; };
@@ -81,7 +78,6 @@
 		3B48765313F0E0BB001E87A4 /* TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B48765213F0E0BB001E87A4 /* TwitterFeed.m */; };
 		3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC39513F358370050431B /* MainView~iPad.xib */; };
 		3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC3A013F36AFD0050431B /* RadioConfig.plist */; };
-		3B5CC3B413F4B30D0050431B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5CC3B313F4B30D0050431B /* Entitlements.plist */; };
 		3B6DD52E13DC77A000400D86 /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6DD52C13DC77A000400D86 /* Errors.strings */; };
 		3B6DD54613DCC3FE00400D86 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DD54513DCC3FE00400D86 /* MessageUI.framework */; };
 		3B86F78C13DBB83200B9C7A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F78B13DBB83200B9C7A2 /* UIKit.framework */; };
@@ -111,6 +107,11 @@
 		3BDBF4F013DFB2E300058C7C /* show8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E813DFB2E300058C7C /* show8.png */; };
 		3BF730A413F23DF600761C24 /* headliner.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF730A313F23DF600761C24 /* headliner.png */; };
 		3BF730B113F2433D00761C24 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF730AF13F2433D00761C24 /* MainWindow-iPad.xib */; };
+		3BFFB6B013F63617007DB416 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BFFB6AF13F63617007DB416 /* Default-Landscape~ipad.png */; };
+		3BFFB6B513F637D2007DB416 /* txtMask-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BFFB6B113F637D2007DB416 /* txtMask-Landscape~ipad.png */; };
+		3BFFB6B613F637D2007DB416 /* txtMask-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BFFB6B213F637D2007DB416 /* txtMask-Portrait~ipad.png */; };
+		3BFFB6B713F637D2007DB416 /* txtMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BFFB6B313F637D2007DB416 /* txtMask.png */; };
+		3BFFB6B813F637D2007DB416 /* txtMask@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BFFB6B413F637D2007DB416 /* txtMask@x2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,8 +140,6 @@
 		3B3EE32D13F4D1BB0093C9F8 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		3B3EE32E13F4D1BB0093C9F8 /* mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mask@2x.png"; sourceTree = "<group>"; };
 		3B3EE32F13F4D1BB0093C9F8 /* mask~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mask~ipad.png"; sourceTree = "<group>"; };
-		3B3EE33013F4D1BB0093C9F8 /* mock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mock@2x.png"; sourceTree = "<group>"; };
-		3B3EE33113F4D1BB0093C9F8 /* mock~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mock~ipad.png"; sourceTree = "<group>"; };
 		3B3EE33213F4D1BB0093C9F8 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		3B3EE33313F4D1BB0093C9F8 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
 		3B3EE33413F4D1BB0093C9F8 /* pause~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause~ipad.png"; sourceTree = "<group>"; };
@@ -163,7 +162,6 @@
 		3B3EE37E13F4F47F0093C9F8 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		3B3EE37F13F4F47F0093C9F8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3B3EE38013F4F47F0093C9F8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3B3EE38413F4F5C70093C9F8 /* txtMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = txtMask.png; sourceTree = "<group>"; };
 		3B4875D513F0E038001E87A4 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		3B4875D613F0E038001E87A4 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		3B4875D813F0E038001E87A4 /* AQLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQLevelMeter.h; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 		3B48765213F0E0BB001E87A4 /* TwitterFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeed.m; sourceTree = "<group>"; };
 		3B5CC39513F358370050431B /* MainView~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainView~iPad.xib"; path = "KXNT/en.lproj/MainView~iPad.xib"; sourceTree = "<group>"; };
 		3B5CC3A013F36AFD0050431B /* RadioConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RadioConfig.plist; sourceTree = "<group>"; };
-		3B5CC3B313F4B30D0050431B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 		3B6DD52D13DC77A000400D86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Errors.strings; sourceTree = "<group>"; };
 		3B6DD54513DCC3FE00400D86 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3B86F78713DBB83200B9C7A2 /* kxntnewsradio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kxntnewsradio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +245,11 @@
 		3BDBF4E813DFB2E300058C7C /* show8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show8.png; sourceTree = "<group>"; };
 		3BF730A313F23DF600761C24 /* headliner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headliner.png; sourceTree = "<group>"; };
 		3BF730B013F2433D00761C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "KXNT/iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		3BFFB6AF13F63617007DB416 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		3BFFB6B113F637D2007DB416 /* txtMask-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txtMask-Landscape~ipad.png"; sourceTree = "<group>"; };
+		3BFFB6B213F637D2007DB416 /* txtMask-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txtMask-Portrait~ipad.png"; sourceTree = "<group>"; };
+		3BFFB6B313F637D2007DB416 /* txtMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = txtMask.png; sourceTree = "<group>"; };
+		3BFFB6B413F637D2007DB416 /* txtMask@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "txtMask@x2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3EE37E13F4F47F0093C9F8 /* Default-Portrait~ipad.png */,
+				3BFFB6AF13F63617007DB416 /* Default-Landscape~ipad.png */,
 				3B3EE37F13F4F47F0093C9F8 /* Default.png */,
 				3B3EE38013F4F47F0093C9F8 /* Default@2x.png */,
 				3B3EE30813F4C7220093C9F8 /* Icon-72.png */,
@@ -462,7 +465,6 @@
 				3B86F79813DBB83200B9C7A2 /* main.m */,
 				3B6DD52C13DC77A000400D86 /* Errors.strings */,
 				3B5CC3A013F36AFD0050431B /* RadioConfig.plist */,
-				3B5CC3B313F4B30D0050431B /* Entitlements.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -489,8 +491,6 @@
 				3B3EE32D13F4D1BB0093C9F8 /* mask.png */,
 				3B3EE32E13F4D1BB0093C9F8 /* mask@2x.png */,
 				3B3EE32F13F4D1BB0093C9F8 /* mask~ipad.png */,
-				3B3EE33013F4D1BB0093C9F8 /* mock@2x.png */,
-				3B3EE33113F4D1BB0093C9F8 /* mock~ipad.png */,
 				3B3EE33213F4D1BB0093C9F8 /* pause.png */,
 				3B3EE33313F4D1BB0093C9F8 /* pause@2x.png */,
 				3B3EE33413F4D1BB0093C9F8 /* pause~ipad.png */,
@@ -506,7 +506,10 @@
 				3B3EE33E13F4D1BB0093C9F8 /* Slab.png */,
 				3B3EE33F13F4D1BB0093C9F8 /* Slab@2x.png */,
 				3B3EE34013F4D1BB0093C9F8 /* Slab~ipad.png */,
-				3B3EE38413F4F5C70093C9F8 /* txtMask.png */,
+				3BFFB6B113F637D2007DB416 /* txtMask-Landscape~ipad.png */,
+				3BFFB6B213F637D2007DB416 /* txtMask-Portrait~ipad.png */,
+				3BFFB6B313F637D2007DB416 /* txtMask.png */,
+				3BFFB6B413F637D2007DB416 /* txtMask@x2.png */,
 				3B3EE34113F4D1BB0093C9F8 /* textSlab.png */,
 				3B3EE34213F4D1BB0093C9F8 /* textSlab@2x.png */,
 				3B3EE34313F4D1BB0093C9F8 /* textSlab~ipad.png */,
@@ -593,7 +596,6 @@
 				3BF730B113F2433D00761C24 /* MainWindow-iPad.xib in Resources */,
 				3B5CC39613F358370050431B /* MainView~iPad.xib in Resources */,
 				3B5CC3A113F36AFD0050431B /* RadioConfig.plist in Resources */,
-				3B5CC3B413F4B30D0050431B /* Entitlements.plist in Resources */,
 				3B3EE30F13F4C7220093C9F8 /* Icon-72.png in Resources */,
 				3B3EE31013F4C7220093C9F8 /* Icon-Small-50.png in Resources */,
 				3B3EE31113F4C7220093C9F8 /* Icon-Small.png in Resources */,
@@ -619,8 +621,6 @@
 				3B3EE35313F4D1BB0093C9F8 /* mask.png in Resources */,
 				3B3EE35413F4D1BB0093C9F8 /* mask@2x.png in Resources */,
 				3B3EE35513F4D1BB0093C9F8 /* mask~ipad.png in Resources */,
-				3B3EE35613F4D1BB0093C9F8 /* mock@2x.png in Resources */,
-				3B3EE35713F4D1BB0093C9F8 /* mock~ipad.png in Resources */,
 				3B3EE35813F4D1BB0093C9F8 /* pause.png in Resources */,
 				3B3EE35913F4D1BB0093C9F8 /* pause@2x.png in Resources */,
 				3B3EE35A13F4D1BB0093C9F8 /* pause~ipad.png in Resources */,
@@ -643,7 +643,11 @@
 				3B3EE38113F4F47F0093C9F8 /* Default-Portrait~ipad.png in Resources */,
 				3B3EE38213F4F47F0093C9F8 /* Default.png in Resources */,
 				3B3EE38313F4F47F0093C9F8 /* Default@2x.png in Resources */,
-				3B3EE38513F4F5C70093C9F8 /* txtMask.png in Resources */,
+				3BFFB6B013F63617007DB416 /* Default-Landscape~ipad.png in Resources */,
+				3BFFB6B513F637D2007DB416 /* txtMask-Landscape~ipad.png in Resources */,
+				3BFFB6B613F637D2007DB416 /* txtMask-Portrait~ipad.png in Resources */,
+				3BFFB6B713F637D2007DB416 /* txtMask.png in Resources */,
+				3BFFB6B813F637D2007DB416 /* txtMask@x2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +746,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
