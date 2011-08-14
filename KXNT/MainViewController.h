@@ -26,6 +26,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;
+- (MFMailComposeViewController*) createMailComposer;
 
 @property (nonatomic, retain) IBOutlet UILabel *nowPlayingBanner;
 @property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
@@ -39,9 +40,10 @@
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;
 - (IBAction)composeMessage:(id)sender;
-//- (IBAction)showSite:(id)sender;
 
 - (void) enterBackground;
 - (void) enterForground;
+
+- (BOOL) isPlaying;
 
 @end

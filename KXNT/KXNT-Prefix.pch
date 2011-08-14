@@ -12,3 +12,11 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define kHomepageKey @"homepage"
+#define kContactKey @"contact"
+#define kSourceKey @"source"
+#define kDescriptionKey @"description"
+#define kTwitterKey @"twitteraccount"
+#define kEmailSubjectKey @"emailsubject"
+

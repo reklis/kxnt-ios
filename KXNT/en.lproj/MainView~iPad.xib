@@ -220,11 +220,6 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="595461567">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">pause~ipad.png</string>
-						</object>
-						<reference key="IBUISelectedImage" ref="595461567"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">play~ipad.png</string>
@@ -547,7 +542,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>MainViewController</string>
+					<string>MainViewController_iPad</string>
 					<string>UIResponder</string>
 					<string>{{514, 109}, {768, 1024}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -566,7 +561,7 @@
 					<string>AQLevelMeter</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="2"/>
+					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -702,6 +697,14 @@
 						<string key="minorKey">./Classes/MainViewController.h</string>
 					</object>
 				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MainViewController_iPad</string>
+					<string key="superclassName">MainViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MainViewController_iPad.h</string>
+					</object>
+				</object>
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
@@ -725,7 +728,6 @@
 				<string>logoframe~ipad.png</string>
 				<string>logo~ipad.png</string>
 				<string>mask~ipad.png</string>
-				<string>pause~ipad.png</string>
 				<string>play~ipad.png</string>
 				<string>textSlab~ipad.png</string>
 				<string>txtMask-Portrait~ipad.png</string>
@@ -741,7 +743,6 @@
 				<string>{508, 314}</string>
 				<string>{495, 301}</string>
 				<string>{506, 353}</string>
-				<string>{298, 298}</string>
 				<string>{298, 298}</string>
 				<string>{507, 53}</string>
 				<string>{768, 46}</string>

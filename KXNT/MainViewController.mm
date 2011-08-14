@@ -13,12 +13,6 @@
  // http://provisioning.streamtheworld.com/pls/KMXBFM.pls
 */
 
-#define kHomepageKey @"homepage"
-#define kContactKey @"contact"
-#define kSourceKey @"source"
-#define kDescriptionKey @"description"
-#define kTwitterKey @"twitteraccount"
-
 @interface MainViewController(Private)
 
 - (void) beginStreaming;
@@ -34,14 +28,18 @@
 - (void) rotateLoadingFlare:(NSTimer*)timer;
 - (void) scrollNowPlayingBanner:(NSTimer*)timer;
 - (void) fetchLatestTweet;
+
 - (void) showAlert:(NSString*)title message:(NSString*)message;
+- (void) showLoading;
+- (void) showPlaying;
+- (void) showPaused;
 
 @end
 
 
 @implementation MainViewController
-@synthesize loadingIndicator;
 
+@synthesize loadingIndicator;
 @synthesize lvlMeter;
 @synthesize logoImage;
 @synthesize composeMessageButton;
@@ -75,13 +73,40 @@
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
 }
 
+- (BOOL) isPlaying
+{
+    BOOL playing = ([self.playPauseButton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]]);
+    return playing;
+}
+
+- (void) showLoading
+{
+    [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
+                          forState:UIControlStateNormal];
+    [loadingIndicator startAnimating];
+}
+
+- (void) showPlaying
+{
+    [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
+                          forState:UIControlStateNormal];
+    [loadingIndicator stopAnimating];
+}
+
+- (void) showPaused
+{
+    [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
+                          forState:UIControlStateNormal];
+    [loadingIndicator stopAnimating];
+}
+
 - (IBAction)playPause:(id)sender
 {
-    if ([self.playPauseButton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]])
-	{		
-        [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
-                              forState:UIControlStateNormal];
-        
+    if ([loadingIndicator isAnimating]) return;
+    
+    if ([self isPlaying])
+	{
+        [self showLoading];
         [self beginStreaming];
 	}
 	else
@@ -174,13 +199,19 @@
 
 #pragma mark MFMailComposeViewControllerDelegate
 
-- (IBAction)composeMessage:(id)sender
+- (MFMailComposeViewController *)createMailComposer
 {
     NSString* streamEmailContact = [self.radioConfig objectForKey:kContactKey];
     MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
     [mailComposer setToRecipients:[NSArray arrayWithObject:streamEmailContact]];
-    [mailComposer setSubject:@"Steve Nohrden Live!"];
+    [mailComposer setSubject:[radioConfig objectForKey:kEmailSubjectKey]];
     [mailComposer setMailComposeDelegate:self];
+    return mailComposer;
+}
+
+- (IBAction)composeMessage:(id)sender
+{
+    MFMailComposeViewController* mailComposer = [self createMailComposer];
     [self presentModalViewController:mailComposer animated:YES];
 }
 
@@ -325,26 +356,20 @@
                          //[nowPlayingBanner setHidden:YES];
                      }];
     
-    [self.loadingIndicator stopAnimating];
-    
     [lvlMeter setAq: nil];
     [self destroyStreamer];
-    
-    [self.playPauseButton setImage:[UIImage imageNamed:@"play.png"]
-                          forState:UIControlStateNormal];
     
     [UIView animateWithDuration:1
                      animations:^(void) {
                          [lvlMeter setAlpha:0.];
                      }];
+    
+    [self showPaused];
 }
 
 - (void)handlePlayingState
 {
-    [self.loadingIndicator stopAnimating];
-    
-    [self.playPauseButton setImage:[UIImage imageNamed:@"pause.png"]
-                          forState:UIControlStateNormal];
+    [self showPlaying];
     
     [nowPlayingBanner setAlpha:0.];
     dispatch_async(dispatch_get_main_queue(), ^(void) {
@@ -378,11 +403,7 @@
 - (void)handleWaitingState
 {
     [lvlMeter setAq: nil];
-    
-    [self.playPauseButton setImage:[UIImage imageNamed:@"loading.png"]
-                          forState:UIControlStateNormal];
-    
-    [self.loadingIndicator startAnimating];
+    [self showLoading];
 }
 
 - (void)scrollNowPlayingBanner:(NSTimer*)timer

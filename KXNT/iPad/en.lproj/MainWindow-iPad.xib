@@ -48,7 +48,6 @@
 				<string key="NSFrameSize">{768, 1024}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -139,6 +138,7 @@
 						<int key="objectID">22</int>
 						<reference key="object" ref="919822394"/>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">Main View Controller</string>
 					</object>
 				</object>
 			</object>
@@ -174,7 +174,7 @@
 						<integer value="2" key="NS.object.0"/>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>MainViewController</string>
+					<string>MainViewController_iPad</string>
 					<string>{{0, 905}, {320, 480}}</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">IBCocoaTouchFramework</string>
@@ -297,7 +297,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>composeMessageButton</string>
-							<string>loadingFlare</string>
+							<string>loadingIndicator</string>
 							<string>logoImage</string>
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
@@ -306,7 +306,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
-							<string>UIImageView</string>
+							<string>UIActivityIndicatorView</string>
 							<string>UIImageView</string>
 							<string>AQLevelMeter</string>
 							<string>UILabel</string>
@@ -318,7 +318,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>composeMessageButton</string>
-							<string>loadingFlare</string>
+							<string>loadingIndicator</string>
 							<string>logoImage</string>
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
@@ -331,8 +331,8 @@
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">loadingFlare</string>
-								<string key="candidateClassName">UIImageView</string>
+								<string key="name">loadingIndicator</string>
+								<string key="candidateClassName">UIActivityIndicatorView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">logoImage</string>
@@ -355,6 +355,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MainViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MainViewController_iPad</string>
+					<string key="superclassName">MainViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MainViewController_iPad.h</string>
 					</object>
 				</object>
 			</object>
