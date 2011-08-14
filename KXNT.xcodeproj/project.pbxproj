@@ -97,6 +97,7 @@
 		3B86F7F613DBC85C00B9C7A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F513DBC85C00B9C7A2 /* AudioToolbox.framework */; };
 		3B86F7F813DBC86F00B9C7A2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */; };
 		3B86F7FA13DBC87C00B9C7A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */; };
+		3B9EEC4F13F758210025BB8C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B9EEC4E13F758210025BB8C /* Entitlements.plist */; };
 		3BDBF4E913DFB2E300058C7C /* show1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E113DFB2E300058C7C /* show1.png */; };
 		3BDBF4EA13DFB2E300058C7C /* show2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E213DFB2E300058C7C /* show2.png */; };
 		3BDBF4EB13DFB2E300058C7C /* show3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBF4E313DFB2E300058C7C /* show3.png */; };
@@ -235,6 +236,7 @@
 		3B86F7F513DBC85C00B9C7A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3B86F7F713DBC86F00B9C7A2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3B86F7F913DBC87C00B9C7A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3B9EEC4E13F758210025BB8C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		3BDBF4E113DFB2E300058C7C /* show1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show1.png; sourceTree = "<group>"; };
 		3BDBF4E213DFB2E300058C7C /* show2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show2.png; sourceTree = "<group>"; };
 		3BDBF4E313DFB2E300058C7C /* show3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show3.png; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 		3B86F77C13DBB83100B9C7A2 = {
 			isa = PBXGroup;
 			children = (
+				3B9EEC4E13F758210025BB8C /* Entitlements.plist */,
 				3B3EE37E13F4F47F0093C9F8 /* Default-Portrait~ipad.png */,
 				3BFFB6AF13F63617007DB416 /* Default-Landscape~ipad.png */,
 				3B3EE37F13F4F47F0093C9F8 /* Default.png */,
@@ -648,6 +651,7 @@
 				3BFFB6B613F637D2007DB416 /* txtMask-Portrait~ipad.png in Resources */,
 				3BFFB6B713F637D2007DB416 /* txtMask.png in Resources */,
 				3BFFB6B813F637D2007DB416 /* txtMask@x2.png in Resources */,
+				3B9EEC4F13F758210025BB8C /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +733,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steven Fusco (2M8VHY6JSJ)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -738,6 +742,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2FEE4B93-9457-4030-A96F-FE856DB994B5";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -789,6 +794,40 @@
 			};
 			name = Release;
 		};
+		3B9EEC5013F758AC0025BB8C /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cibo Technology, LLC";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8120BD94-4A84-4543-A4D1-65CD2CE6EF54";
+				SDKROOT = iphoneos;
+			};
+			name = AdHoc;
+		};
+		3B9EEC5113F758AC0025BB8C /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KXNT/KXNT-Prefix.pch";
+				INFOPLIST_FILE = "KXNT/KXNT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -797,6 +836,7 @@
 			buildConfigurations = (
 				3B86F7AA13DBB83200B9C7A2 /* Debug */,
 				3B86F7AB13DBB83200B9C7A2 /* Release */,
+				3B9EEC5013F758AC0025BB8C /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -806,6 +846,7 @@
 			buildConfigurations = (
 				3B86F7AD13DBB83200B9C7A2 /* Debug */,
 				3B86F7AE13DBB83200B9C7A2 /* Release */,
+				3B9EEC5113F758AC0025BB8C /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
