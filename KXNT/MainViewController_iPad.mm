@@ -16,6 +16,13 @@
 @end
 
 @implementation MainViewController_iPad
+@synthesize background;
+@synthesize backgroundSlab;
+@synthesize logoFrame;
+@synthesize textSlab;
+@synthesize textMask;
+@synthesize levelMeterMask;
+@synthesize scheduleButton;
 
 - (IBAction)showInfo:(id)sender
 {
@@ -104,4 +111,97 @@
     [self dismissPopover];
 }
 
+#pragma Rotation
+
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        [self.background setImage:[UIImage imageNamed:@"bk-Landscape~ipad.png"]];
+        [self.backgroundSlab setImage:[UIImage imageNamed:@"Slab-Landscape~ipad.png"]];
+        [self.textMask setImage:[UIImage imageNamed:@"txtMask-Landscape~ipad.png"]];
+        
+        [UIView animateWithDuration:duration
+                         animations:^(void) {
+            self.backgroundSlab.frame = CGRectMake(0, 0, 1024, 748);
+            self.logoImage.center = CGPointMake(256, 274);
+            self.logoImage.bounds = CGRectMake(0, 0, 483, 292);
+            self.logoFrame.center = CGPointMake(256, 276);
+            self.logoFrame.bounds = CGRectMake(0, 0, 493, 307);
+            self.textSlab.center = CGPointMake(752, 470);
+            self.textSlab.bounds = CGRectMake(0, 0, 507, 53);
+            self.textMask.center = CGPointMake(512, 471);
+            self.textMask.bounds = CGRectMake(0, 0, 1024, 46);
+            self.lvlMeter.center = CGPointMake(751, 284);
+            self.lvlMeter.bounds = CGRectMake(0, 0, 448, 313);
+            self.levelMeterMask.center = CGPointMake(751, 284);
+            self.levelMeterMask.bounds = CGRectMake(0, 0, 448, 313);
+            self.playPauseButton.center = CGPointMake(756, 290);
+            self.playPauseButton.bounds = CGRectMake(0,0, 298, 298);
+            self.loadingIndicator.center = CGPointMake(756, 290);
+            self.scheduleButton.center = CGPointMake(250, 483);
+            self.scheduleButton.bounds = CGRectMake(0, 0, 481, 70);
+            self.composeMessageButton.center = CGPointMake(250, 563);
+            self.composeMessageButton.bounds = CGRectMake(0, 0, 481, 70);
+            // now playing .... adjust math? 
+            self.nowPlayingBanner.center = CGPointMake(751, 470);
+            self.nowPlayingBanner.bounds = CGRectMake(0, 0, 478, 53);
+                         }];
+    } else {
+        [self.background setImage:[UIImage imageNamed:@"bk~ipad.png"]];
+        [self.backgroundSlab setImage:[UIImage imageNamed:@"Slab~ipad.png"]];
+        [self.textMask setImage:[UIImage imageNamed:@"txtMask-Portrait~ipad.png"]];
+        [UIView animateWithDuration:duration
+                         animations:^(void) {
+            self.backgroundSlab.frame = CGRectMake(-8, 0, 768, 1004);
+            self.logoImage.center = CGPointMake(384, 178);
+            self.logoImage.bounds = CGRectMake(0, 0, 495, 301);
+            self.logoFrame.center = CGPointMake(386, 180);
+            self.logoFrame.bounds = CGRectMake(0, 0, 508, 314);
+            self.textSlab.center = CGPointMake(384, 378);
+            self.textSlab.bounds = CGRectMake(0, 0, 507, 53);
+            self.textMask.center = CGPointMake(384, 374);
+            self.textMask.bounds = CGRectMake(0, 0, 768, 46);
+            self.lvlMeter.center = CGPointMake(383, 576);
+            self.lvlMeter.bounds = CGRectMake(0, 0, 448, 313);
+            self.levelMeterMask.center = CGPointMake(383, 576);
+            self.levelMeterMask.bounds = CGRectMake(0, 0, 448, 313);
+            self.playPauseButton.center = CGPointMake(383, 577);
+            self.playPauseButton.bounds = CGRectMake(0,0, 298, 298);
+            self.loadingIndicator.center = CGPointMake(382, 576);
+            self.scheduleButton.center = CGPointMake(383, 828);
+            self.scheduleButton.bounds = CGRectMake(0, 0, 502, 76);
+            self.composeMessageButton.center = CGPointMake(383, 912);
+            self.composeMessageButton.bounds = CGRectMake(0, 0, 502, 76);
+            // now playing .... adjust math? 
+            self.nowPlayingBanner.center = CGPointMake(386, 378);
+            self.nowPlayingBanner.bounds = CGRectMake(0, 0, 478, 53);
+                         }];
+    }
+}
+
+- (void)dealloc {
+    [background release];
+    [backgroundSlab release];
+    [logoFrame release];
+    [textSlab release];
+    [textMask release];
+    [levelMeterMask release];
+    [scheduleButton release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [self setBackground:nil];
+    [self setBackgroundSlab:nil];
+    [self setLogoFrame:nil];
+    [self setTextSlab:nil];
+    [self setTextMask:nil];
+    [self setLevelMeterMask:nil];
+    [self setScheduleButton:nil];
+    [super viewDidUnload];
+}
 @end
