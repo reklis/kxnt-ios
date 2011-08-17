@@ -60,21 +60,6 @@
 							<string key="NSResourceName">bk.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="939151199">
-						<reference key="NSNextResponder" ref="883825266"/>
-						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 460}</string>
-						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="956659419"/>
-						<int key="IBUIContentMode">4</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Slab.png</string>
-						</object>
-					</object>
 					<object class="IBUIImageView" id="956659419">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">293</int>
@@ -93,7 +78,7 @@
 					<object class="IBUIImageView" id="444978032">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{39, 157}, {242, 22}}</string>
+						<string key="NSFrame">{{41, 157}, {242, 22}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="233597712"/>
@@ -137,11 +122,11 @@
 					</object>
 					<object class="IBUIImageView" id="887727117">
 						<reference key="NSNextResponder" ref="883825266"/>
-						<int key="NSvFlags">290</int>
+						<int key="NSvFlags">306</int>
 						<string key="NSFrame">{{0, 157}, {320, 22}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="939151199"/>
+						<reference key="NSNextKeyView"/>
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -165,7 +150,7 @@
 					</object>
 					<object class="IBUIImageView" id="591794122">
 						<reference key="NSNextResponder" ref="883825266"/>
-						<int key="NSvFlags">293</int>
+						<int key="NSvFlags">-2147483355</int>
 						<string key="NSFrame">{{41, 183}, {244, 170}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
@@ -424,7 +409,6 @@
 							<reference ref="790817779"/>
 							<reference ref="591794122"/>
 							<reference ref="558454645"/>
-							<reference ref="939151199"/>
 							<reference ref="781471966"/>
 							<reference ref="887727117"/>
 						</object>
@@ -481,11 +465,6 @@
 						<reference key="parent" ref="883825266"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">59</int>
-						<reference key="object" ref="939151199"/>
-						<reference key="parent" ref="883825266"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">60</int>
 						<reference key="object" ref="781471966"/>
 						<reference key="parent" ref="883825266"/>
@@ -518,7 +497,6 @@
 					<string>54.IBPluginDependency</string>
 					<string>57.IBPluginDependency</string>
 					<string>58.IBPluginDependency</string>
-					<string>59.IBPluginDependency</string>
 					<string>60.IBPluginDependency</string>
 					<string>62.IBPluginDependency</string>
 				</object>
@@ -538,7 +516,6 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="2"/>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -700,7 +677,6 @@
 				<string>EmailUp.png</string>
 				<string>ScheduleDown.png</string>
 				<string>ScheduleUp.png</string>
-				<string>Slab.png</string>
 				<string>bk.png</string>
 				<string>logo.png</string>
 				<string>mask.png</string>
@@ -714,7 +690,6 @@
 				<string>{244, 39}</string>
 				<string>{244, 39}</string>
 				<string>{244, 39}</string>
-				<string>{275, 543}</string>
 				<string>{320, 480}</string>
 				<string>{238, 145}</string>
 				<string>{244, 170}</string>

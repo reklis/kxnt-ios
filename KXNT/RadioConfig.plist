@@ -6,13 +6,13 @@
 	<string>steve@stevenohrdenlive.com</string>
 	<key>description</key>
 	<string>Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area </string>
+	<key>emailsubject</key>
+	<string>Steve Nohrden Live!</string>
 	<key>homepage</key>
 	<string>http://www.kxnt.com</string>
 	<key>source</key>
 	<string>http://provisioning.streamtheworld.com/pls/KXNTAM.pls</string>
 	<key>twitteraccount</key>
-	<string>kxntnewsradio</string>
-	<key>emailsubject</key>
-	<string>Steve Nohrden Live!</string>
+	<string>kxnt</string>
 </dict>
 </plist>

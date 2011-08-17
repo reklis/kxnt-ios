@@ -20,6 +20,7 @@
     UIImageView *textMask;
     UIImageView *levelMeterMask;
     UIButton *scheduleButton;
+    UIInterfaceOrientation currentOrientation;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *background;

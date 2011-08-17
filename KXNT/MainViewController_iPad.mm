@@ -113,6 +113,23 @@
 
 #pragma Rotation
 
+- (void) scrollNowPlayingBanner:(NSTimer*)timer
+{
+    CGRect bannerRect = self.nowPlayingBanner.bounds;
+    CGFloat bannerWidth = CGRectGetWidth(bannerRect);
+    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
+    if (UIInterfaceOrientationIsPortrait(currentOrientation)) {
+        if (t.tx <= bannerWidth*-.7) {
+            t = CGAffineTransformTranslate(t, bannerWidth*1.4, 0);
+        }
+    } else {
+        if (t.tx <= bannerWidth*-.66) {
+            t = CGAffineTransformTranslate(t, bannerWidth*1.32, 0);
+        }
+    }
+    self.nowPlayingBanner.transform = t;
+}
+
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return YES;
@@ -132,9 +149,9 @@
             self.logoImage.bounds = CGRectMake(0, 0, 483, 292);
             self.logoFrame.center = CGPointMake(256, 276);
             self.logoFrame.bounds = CGRectMake(0, 0, 493, 307);
-            self.textSlab.center = CGPointMake(752, 470);
+            self.textSlab.center = CGPointMake(752, 520);
             self.textSlab.bounds = CGRectMake(0, 0, 507, 53);
-            self.textMask.center = CGPointMake(512, 471);
+            self.textMask.center = CGPointMake(512, 521);
             self.textMask.bounds = CGRectMake(0, 0, 1024, 46);
             self.lvlMeter.center = CGPointMake(751, 284);
             self.lvlMeter.bounds = CGRectMake(0, 0, 448, 313);
@@ -147,9 +164,7 @@
             self.scheduleButton.bounds = CGRectMake(0, 0, 481, 70);
             self.composeMessageButton.center = CGPointMake(250, 563);
             self.composeMessageButton.bounds = CGRectMake(0, 0, 481, 70);
-            // now playing .... adjust math? 
-            self.nowPlayingBanner.center = CGPointMake(751, 470);
-            self.nowPlayingBanner.bounds = CGRectMake(0, 0, 478, 53);
+            self.nowPlayingBanner.center = CGPointMake(751, 520);
                          }];
     } else {
         [self.background setImage:[UIImage imageNamed:@"bk~ipad.png"]];
@@ -162,7 +177,7 @@
             self.logoImage.bounds = CGRectMake(0, 0, 495, 301);
             self.logoFrame.center = CGPointMake(386, 180);
             self.logoFrame.bounds = CGRectMake(0, 0, 508, 314);
-            self.textSlab.center = CGPointMake(384, 378);
+            self.textSlab.center = CGPointMake(380, 378);
             self.textSlab.bounds = CGRectMake(0, 0, 507, 53);
             self.textMask.center = CGPointMake(384, 374);
             self.textMask.bounds = CGRectMake(0, 0, 768, 46);
@@ -177,14 +192,19 @@
             self.scheduleButton.bounds = CGRectMake(0, 0, 502, 76);
             self.composeMessageButton.center = CGPointMake(383, 912);
             self.composeMessageButton.bounds = CGRectMake(0, 0, 502, 76);
-            // now playing .... adjust math? 
             self.nowPlayingBanner.center = CGPointMake(386, 378);
-            self.nowPlayingBanner.bounds = CGRectMake(0, 0, 478, 53);
                          }];
     }
+    
+    currentOrientation = toInterfaceOrientation;
 }
 
-- (void)dealloc {
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    self.nowPlayingBanner.transform = CGAffineTransformIdentity;
+}
+
+- (void) dealloc {
     [background release];
     [backgroundSlab release];
     [logoFrame release];
@@ -194,7 +214,7 @@
     [scheduleButton release];
     [super dealloc];
 }
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     [self setBackground:nil];
     [self setBackgroundSlab:nil];
     [self setLogoFrame:nil];

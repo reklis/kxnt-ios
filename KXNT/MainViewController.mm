@@ -143,6 +143,12 @@
                              CGRect newBounds = CGRectMake(0, 0, size.width, size.height);
                              self.nowPlayingBanner.bounds = newBounds;
                              self.nowPlayingBanner.text = s;
+                             
+//                             dispatch_async(dispatch_get_main_queue(), ^(void) {
+//                                 [self performSelector:@selector(fetchLatestTweet)
+//                                            withObject:nil
+//                                            afterDelay:1000];
+//                             });
                          } else {
                              NSLog(@"%@", errorOrNil);
                          }
@@ -408,13 +414,11 @@
 
 - (void)scrollNowPlayingBanner:(NSTimer*)timer
 {
-    CGRect windowRect = self.view.window.bounds;
-    CGFloat windowWidth = CGRectGetWidth(windowRect);
     CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
     CGRect bannerRect = self.nowPlayingBanner.bounds;
     CGFloat bannerWidth = CGRectGetWidth(bannerRect);
-    if (t.tx <= (bannerWidth*-.5)-(windowWidth*1.25)) {
-        t = CGAffineTransformTranslate(t, bannerWidth+windowWidth*1.25, 0);
+    if (t.tx <= bannerWidth*-.9) {
+        t = CGAffineTransformTranslate(t, bannerWidth*1.8, 0);
     }
     self.nowPlayingBanner.transform = t;
 }
