@@ -222,7 +222,13 @@
 - (void)showcaseImageTapped:(id)sender
 {
     MFMailComposeViewController* mailComposer = [self createMailComposer];
-    [self presentModalViewController:mailComposer animated:YES];
+    
+    UIUserInterfaceIdiom idiom = UI_USER_INTERFACE_IDIOM();
+    if (UIUserInterfaceIdiomPad == idiom) {
+        [self.delegate presentModalViewController:mailComposer animated:YES];
+    } else {
+        [self presentModalViewController:mailComposer animated:YES];
+    }
 }
 
 - (MFMailComposeViewController *)createMailComposer
@@ -234,17 +240,20 @@
     return mailComposer;
 }
 
-- (IBAction)composeMessage:(id)sender
-{
-    MFMailComposeViewController* mailComposer = [self createMailComposer];
-    [self presentModalViewController:mailComposer animated:YES];
-}
-
 - (void)mailComposeController:(MFMailComposeViewController *)controller
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError *)error
 {
-    [self dismissModalViewControllerAnimated:YES];
+    if (error) {
+        NSLog(@"Error sending mail: %@", error);
+    }
+    
+    UIUserInterfaceIdiom idiom = UI_USER_INTERFACE_IDIOM();
+    if (UIUserInterfaceIdiomPad == idiom) {
+        [self.delegate dismissModalViewControllerAnimated:YES];
+    } else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 

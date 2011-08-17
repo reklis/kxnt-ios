@@ -56,5 +56,9 @@
 - (NSString*) emailSubject;
 - (NSString*) showcaseDescription;
 - (NSString*) showcaseTagline;
+
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+
+- (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated;
+- (void)dismissModalViewControllerAnimated:(BOOL)animated;
 @end
