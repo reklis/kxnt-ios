@@ -23,6 +23,7 @@
     NSTimer* scrollingTimer;
     TwitterFeed* twitter;
     UIActivityIndicatorView *loadingIndicator;
+    UIImageView *textMask;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;
@@ -33,9 +34,11 @@
 @property (nonatomic, retain) IBOutlet AQLevelMeter* lvlMeter;
 @property (nonatomic, retain) IBOutlet UIImageView *logoImage;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *loadingIndicator;
+@property (nonatomic, retain) IBOutlet UIImageView *textMask;
 
 @property (nonatomic, retain) NSString* streamSource;
 @property (nonatomic, retain) NSDictionary* radioConfig;
+@property (nonatomic, retain) NSURL* tweetActionUrl;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;

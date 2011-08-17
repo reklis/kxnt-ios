@@ -25,6 +25,6 @@ typedef void (^TwitterFeedResultCallback)(NSError* errorOrNil, NSString* tweetTe
 
 - (void) fetchLatestTweet:(NSString*)screen_name callback:(TwitterFeedResultCallback)cb;
 - (void) cancel;
-
++ (NSURL*) extractUrlFromTweet:(NSString*)t;
 
 @end

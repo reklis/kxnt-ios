@@ -28,6 +28,7 @@
 - (void) rotateLoadingFlare:(NSTimer*)timer;
 - (void) scrollNowPlayingBanner:(NSTimer*)timer;
 - (void) fetchLatestTweet;
+- (void) nowPlayingBannerTapped:(id)sender;
 
 - (void) showAlert:(NSString*)title message:(NSString*)message;
 - (void) showLoading;
@@ -40,6 +41,7 @@
 @implementation MainViewController
 
 @synthesize loadingIndicator;
+@synthesize textMask;
 @synthesize lvlMeter;
 @synthesize logoImage;
 @synthesize composeMessageButton;
@@ -47,6 +49,7 @@
 @synthesize playPauseButton;
 @synthesize streamSource;
 @synthesize radioConfig;
+@synthesize tweetActionUrl;
 
 - (void)viewDidLoad
 {
@@ -71,6 +74,12 @@
     [lvlMeter setVertical:YES];
     [lvlMeter setRefreshHz:1./60.];
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
+    
+    UITapGestureRecognizer* nowPlayingTap = [[[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                     action:@selector(nowPlayingBannerTapped:)] autorelease];
+    [nowPlayingTap setNumberOfTapsRequired:1];
+    [self.textMask setUserInteractionEnabled:YES];
+    [self.textMask addGestureRecognizer:nowPlayingTap];
 }
 
 - (BOOL) isPlaying
@@ -137,22 +146,37 @@
                      callback:^(NSError *errorOrNil, NSString *tweetText) {
                          if (nil == errorOrNil) {
                              NSString* streamDescription = [self.radioConfig objectForKey:kDescriptionKey];
-                             NSString* s = [streamDescription stringByAppendingString:tweetText];
+                             NSString* s = [streamDescription stringByAppendingFormat:@" @%@: %@", streamTwitterAccount, tweetText];
                              UIFont* f = self.nowPlayingBanner.font;
                              CGSize size = [s sizeWithFont:f];
                              CGRect newBounds = CGRectMake(0, 0, size.width, size.height);
                              self.nowPlayingBanner.bounds = newBounds;
                              self.nowPlayingBanner.text = s;
-                             
-//                             dispatch_async(dispatch_get_main_queue(), ^(void) {
-//                                 [self performSelector:@selector(fetchLatestTweet)
-//                                            withObject:nil
-//                                            afterDelay:1000];
-//                             });
+                             self.tweetActionUrl = [TwitterFeed extractUrlFromTweet:tweetText];
+                                                          
+                             dispatch_async(dispatch_get_main_queue(), ^(void) {
+                                 [self performSelector:@selector(fetchLatestTweet)
+                                            withObject:nil
+                                            afterDelay:60];
+                             });
                          } else {
                              NSLog(@"%@", errorOrNil);
                          }
                      }];
+}
+
+- (void)nowPlayingBannerTapped:(id)sender
+{
+    if ((self.tweetActionUrl)
+        &&
+        (self.nowPlayingBanner.alpha == 1.0)
+        &&
+        ([self.nowPlayingBanner isHidden] == NO)
+    ) {
+        if ([[UIApplication sharedApplication] canOpenURL:self.tweetActionUrl]) {
+            [[UIApplication sharedApplication] openURL:self.tweetActionUrl];
+        }
+    }
 }
 
 - (void)showAlert:(NSString *)title message:(NSString *)message
@@ -459,6 +483,9 @@
 
 - (void)viewDidUnload
 {
+    [scrollingTimer invalidate];
+    [scrollingTimer release];
+    scrollingTimer = nil;
     [self setNowPlayingBanner:nil];
     [self setComposeMessageButton:nil];
     [self setPlayPauseButton:nil];
@@ -466,12 +493,9 @@
     [self setLogoImage:nil];
     [self setStreamSource:nil];
     [self setRadioConfig:nil];
-        
-    [scrollingTimer invalidate];
-    [scrollingTimer release];
-    scrollingTimer = nil;
-    
+    [self setTweetActionUrl:nil];
     [self setLoadingIndicator:nil];
+    [self setTextMask:nil];
     [super viewDidUnload];
 }
 
@@ -488,6 +512,8 @@
     [streamSource release];
     [radioConfig release];
     [loadingIndicator release];
+    [tweetActionUrl release];
+    [textMask release];
     [super dealloc];
 }
 

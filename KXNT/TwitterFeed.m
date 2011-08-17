@@ -60,6 +60,48 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
     resultCallback = [cb copy];
 }
 
++ (NSURL*) extractUrlFromTweet:(NSString*)t
+{
+    @try {
+        NSScanner* httpUrlScanner = [NSScanner scannerWithString:t];
+        [httpUrlScanner scanUpToString:@"http" intoString:NULL];
+        NSString* httpUrl = nil;
+        [httpUrlScanner scanUpToString:@" " intoString:&httpUrl];
+        
+        if (httpUrl) {
+            
+            return [NSURL URLWithString:httpUrl];
+        
+        } else {
+            
+            NSMutableString *tel = [NSMutableString stringWithCapacity:t.length];
+            NSScanner *telScanner = [NSScanner scannerWithString:t];
+            NSCharacterSet *numbers = [NSCharacterSet 
+                                       characterSetWithCharactersInString:@"0123456789"];
+            
+            while ([telScanner isAtEnd] == NO) {
+                NSString *buffer;
+                if ([telScanner scanCharactersFromSet:numbers intoString:&buffer]) {
+                    [tel appendString:buffer];
+                } else {
+                    [telScanner setScanLocation:([telScanner scanLocation] + 1)];
+                }
+            }
+            
+            if ([tel length] >= 7) {
+                [tel insertString:@"tel://" atIndex:0];
+                return [NSURL URLWithString:tel];
+            }
+            
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"error extracting url: %@", exception);
+    }
+    
+    return nil;
+}
+
 - (void) cancel
 {
     [conn cancel];
@@ -120,7 +162,7 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-	NSLog(@"Connection didReceiveData of length: %u", data.length);
+	//NSLog(@"Connection didReceiveData of length: %u", data.length);
     
 	// Parse the new chunk of data. The parser will append it to
 	// its internal buffer, then parse from where it left off in

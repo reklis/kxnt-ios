@@ -51,7 +51,7 @@
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="887727117"/>
+						<reference key="NSNextKeyView" ref="956659419"/>
 						<int key="IBUIContentMode">2</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -66,7 +66,7 @@
 						<string key="NSFrame">{{41, 2}, {238, 145}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="444978032"/>
+						<reference key="NSNextKeyView" ref="887727117"/>
 						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -126,7 +126,7 @@
 						<string key="NSFrame">{{0, 157}, {320, 22}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="444978032"/>
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -138,7 +138,7 @@
 					<object class="IBUIView" id="207209155">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">-2147483355</int>
-						<string key="NSFrame">{{41, 183}, {244, 170}}</string>
+						<string key="NSFrame">{{38, 183}, {244, 170}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="591794122"/>
@@ -151,7 +151,7 @@
 					<object class="IBUIImageView" id="591794122">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">-2147483355</int>
-						<string key="NSFrame">{{41, 183}, {244, 170}}</string>
+						<string key="NSFrame">{{38, 183}, {244, 170}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="76078663"/>
@@ -166,7 +166,7 @@
 					<object class="IBUIButton" id="76078663">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">293</int>
-						<string key="NSFrame">{{92, 198}, {144, 144}}</string>
+						<string key="NSFrame">{{88, 198}, {144, 144}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="781471966"/>
@@ -193,6 +193,17 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">play.png</string>
 						</object>
+					</object>
+					<object class="IBUIActivityIndicatorView" id="781471966">
+						<reference key="NSNextResponder" ref="883825266"/>
+						<int key="NSvFlags">-2147483355</int>
+						<string key="NSFrame">{{141, 248}, {37, 37}}</string>
+						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="558454645"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIStyle">0</int>
 					</object>
 					<object class="IBUIButton" id="558454645">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -236,6 +247,7 @@
 						<string key="NSFrame">{{41, 401}, {244, 39}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -257,17 +269,6 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">EmailUp.png</string>
 						</object>
-					</object>
-					<object class="IBUIActivityIndicatorView" id="781471966">
-						<reference key="NSNextResponder" ref="883825266"/>
-						<int key="NSvFlags">-2147483355</int>
-						<string key="NSFrame">{{146, 248}, {37, 37}}</string>
-						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="558454645"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIStyle">0</int>
 					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -374,6 +375,14 @@
 					</object>
 					<int key="connectionID">61</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">textMask</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="887727117"/>
+					</object>
+					<int key="connectionID">63</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -409,8 +418,8 @@
 							<reference ref="790817779"/>
 							<reference ref="591794122"/>
 							<reference ref="558454645"/>
-							<reference ref="781471966"/>
 							<reference ref="887727117"/>
+							<reference ref="781471966"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -535,7 +544,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">62</int>
+			<int key="maxID">63</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -600,6 +609,7 @@
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
+							<string>textMask</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -609,6 +619,7 @@
 							<string>AQLevelMeter</string>
 							<string>UILabel</string>
 							<string>UIButton</string>
+							<string>UIImageView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -621,6 +632,7 @@
 							<string>lvlMeter</string>
 							<string>nowPlayingBanner</string>
 							<string>playPauseButton</string>
+							<string>textMask</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -647,6 +659,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">playPauseButton</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">textMask</string>
+								<string key="candidateClassName">UIImageView</string>
 							</object>
 						</object>
 					</object>

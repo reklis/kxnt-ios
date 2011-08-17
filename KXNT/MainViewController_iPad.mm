@@ -20,7 +20,6 @@
 @synthesize backgroundSlab;
 @synthesize logoFrame;
 @synthesize textSlab;
-@synthesize textMask;
 @synthesize levelMeterMask;
 @synthesize scheduleButton;
 
@@ -209,7 +208,6 @@
     [backgroundSlab release];
     [logoFrame release];
     [textSlab release];
-    [textMask release];
     [levelMeterMask release];
     [scheduleButton release];
     [super dealloc];
@@ -219,7 +217,6 @@
     [self setBackgroundSlab:nil];
     [self setLogoFrame:nil];
     [self setTextSlab:nil];
-    [self setTextMask:nil];
     [self setLevelMeterMask:nil];
     [self setScheduleButton:nil];
     [super viewDidUnload];

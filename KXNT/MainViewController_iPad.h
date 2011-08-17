@@ -17,7 +17,6 @@
     UIImageView *backgroundSlab;
     UIImageView *logoFrame;
     UIImageView *textSlab;
-    UIImageView *textMask;
     UIImageView *levelMeterMask;
     UIButton *scheduleButton;
     UIInterfaceOrientation currentOrientation;
@@ -27,7 +26,6 @@
 @property (nonatomic, retain) IBOutlet UIImageView *backgroundSlab;
 @property (nonatomic, retain) IBOutlet UIImageView *logoFrame;
 @property (nonatomic, retain) IBOutlet UIImageView *textSlab;
-@property (nonatomic, retain) IBOutlet UIImageView *textMask;
 @property (nonatomic, retain) IBOutlet UIImageView *levelMeterMask;
 @property (nonatomic, retain) IBOutlet UIButton *scheduleButton;
 
