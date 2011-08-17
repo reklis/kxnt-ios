@@ -54,5 +54,7 @@
 @protocol FlipsideViewControllerDelegate
 - (NSString*) emailToAddress;
 - (NSString*) emailSubject;
+- (NSString*) showcaseDescription;
+- (NSString*) showcaseTagline;
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end

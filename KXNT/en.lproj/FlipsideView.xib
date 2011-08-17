@@ -75,7 +75,7 @@
 					<object class="IBUIImageView" id="70578700">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{20, 61}, {280, 138}}</string>
+						<string key="NSFrame">{{20, 44}, {280, 152}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="544119764"/>
@@ -90,7 +90,7 @@
 					<object class="IBUILabel" id="677873561">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{64, 207}, {193, 73}}</string>
+						<string key="NSFrame">{{64, 216}, {193, 51}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="128013710"/>
@@ -99,7 +99,7 @@
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">U3RldmUgTm9ocmRlbiBMaXZlCjNwbSAtIDVwbSBvbiBTdW5kYXlzA</string>
+						<string key="IBUIText">&lt;headliner-schedule&gt;</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Futura-CondensedMedium</string>
 							<double key="NSSize">18</double>
@@ -128,7 +128,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Discussing real estate and the politics that surround it</string>
+						<string key="IBUIText">&lt;headliner-tagline&gt;</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">14</double>
@@ -252,7 +252,6 @@
 						<string key="NSFrame">{{221, 383}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -10264,8 +10263,6 @@ AAEAAQABA</bytes>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="871675769"/>
-							<reference ref="70578700"/>
-							<reference ref="677873561"/>
 							<reference ref="544119764"/>
 							<reference ref="128013710"/>
 							<reference ref="683636557"/>
@@ -10275,6 +10272,8 @@ AAEAAQABA</bytes>
 							<reference ref="330563630"/>
 							<reference ref="430892677"/>
 							<reference ref="602727232"/>
+							<reference ref="677873561"/>
+							<reference ref="70578700"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -10415,7 +10414,7 @@ AAEAAQABA</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">70</int>
+			<int key="maxID">71</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -10578,7 +10577,7 @@ AAEAAQABA</bytes>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{213, 213}</string>
+				<string>{479, 720}</string>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>
 				<string>{180, 60}</string>

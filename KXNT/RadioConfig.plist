@@ -14,5 +14,10 @@
 	<string>http://provisioning.streamtheworld.com/pls/KXNTAM.pls</string>
 	<key>twitteraccount</key>
 	<string>kxnt</string>
+	<key>headliner-schedule</key>
+	<string>Steve Nohrden Live
+3pm - 5pm on Sundays</string>
+	<key>headliner-tagline</key>
+	<string>Discussing real estate and the politics that surround it</string>
 </dict>
 </plist>

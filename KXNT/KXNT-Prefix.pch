@@ -19,4 +19,5 @@
 #define kDescriptionKey @"description"
 #define kTwitterKey @"twitteraccount"
 #define kEmailSubjectKey @"emailsubject"
-
+#define kHeadlinerSchedule @"headliner-schedule"
+#define kHeadlinerTagline @"headliner-tagline"

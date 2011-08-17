@@ -66,6 +66,9 @@
                                                                          action:@selector(showcaseImageTapped:)] autorelease];
     [showcaseImage setUserInteractionEnabled:YES];
     [showcaseImage addGestureRecognizer:g];
+    
+    [showcaseDescription setText:[self.delegate showcaseDescription]];
+    [showcaseTagline setText:[self.delegate showcaseTagline]];
 }
 
 - (void)viewDidUnload
@@ -102,10 +105,13 @@
     
     [showcaseImage release];
     showcaseImage = nil;
+    
     [showcaseDescription release];
     showcaseDescription = nil;
+    
     [showcaseTagline release];
     showcaseTagline = nil;
+    
     [super viewDidUnload];
 }
 

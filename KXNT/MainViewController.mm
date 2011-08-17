@@ -453,6 +453,14 @@
     return [self.radioConfig objectForKey:kEmailSubjectKey];
 }
 
+- (NSString *)showcaseDescription {
+    return [self.radioConfig objectForKey:kHeadlinerSchedule];
+}
+
+- (NSString *)showcaseTagline {
+    return [self.radioConfig objectForKey:kHeadlinerTagline];
+}
+
 #pragma mark UIViewController
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
