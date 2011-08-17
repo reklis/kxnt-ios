@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+
 
 @protocol FlipsideViewControllerDelegate;
 
 @interface FlipsideViewController : UIViewController
+<MFMailComposeViewControllerDelegate>
 {
     IBOutlet UIImageView* image1;
     IBOutlet UIImageView* image2;
@@ -43,9 +46,13 @@
 - (void)zoomImage:(UIGestureRecognizer*)zoomGesture;
 - (void)dismissImage;
 
+- (MFMailComposeViewController*) createMailComposer;
+
 @end
 
 
 @protocol FlipsideViewControllerDelegate
+- (NSString*) emailToAddress;
+- (NSString*) emailSubject;
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end

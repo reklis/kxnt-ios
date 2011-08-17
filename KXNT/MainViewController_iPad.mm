@@ -79,12 +79,6 @@
     [loadingIndicator stopAnimating];
 }
 
-- (IBAction)composeMessage:(id)sender
-{
-    MFMailComposeViewController* mailComposer = [self createMailComposer];
-    [self presentPopoverFromSender:sender withController:mailComposer];    
-}
-
 #pragma mark FlipsideViewControllerDelegate
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
@@ -161,8 +155,8 @@
             self.loadingIndicator.center = CGPointMake(756, 290);
             self.scheduleButton.center = CGPointMake(250, 483);
             self.scheduleButton.bounds = CGRectMake(0, 0, 481, 70);
-            self.composeMessageButton.center = CGPointMake(250, 563);
-            self.composeMessageButton.bounds = CGRectMake(0, 0, 481, 70);
+            self.contactButton.center = CGPointMake(250, 563);
+            self.contactButton.bounds = CGRectMake(0, 0, 481, 70);
             self.nowPlayingBanner.center = CGPointMake(751, 520);
                          }];
     } else {
@@ -189,8 +183,8 @@
             self.loadingIndicator.center = CGPointMake(382, 576);
             self.scheduleButton.center = CGPointMake(383, 828);
             self.scheduleButton.bounds = CGRectMake(0, 0, 502, 76);
-            self.composeMessageButton.center = CGPointMake(383, 912);
-            self.composeMessageButton.bounds = CGRectMake(0, 0, 502, 76);
+            self.contactButton.center = CGPointMake(383, 912);
+            self.contactButton.bounds = CGRectMake(0, 0, 502, 76);
             self.nowPlayingBanner.center = CGPointMake(386, 378);
                          }];
     }

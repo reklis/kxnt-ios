@@ -44,7 +44,7 @@
 @synthesize textMask;
 @synthesize lvlMeter;
 @synthesize logoImage;
-@synthesize composeMessageButton;
+@synthesize contactButton;
 @synthesize nowPlayingBanner;
 @synthesize playPauseButton;
 @synthesize streamSource;
@@ -61,11 +61,6 @@
     
     scrollingTimer = nil;
     
-    // hide the mail button on devices that don't have mail installed
-    if (![MFMailComposeViewController canSendMail]) {
-        [composeMessageButton setHidden:YES];
-    }
-    
     // setup the level meters
     UIColor* bgColor = [[[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5] autorelease];
     [lvlMeter setBackgroundColor:bgColor];
@@ -75,6 +70,7 @@
     [lvlMeter setRefreshHz:1./60.];
     [lvlMeter setChannelNumbers:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], nil]];
     
+    // wire up tap gesture for tweet url handling
     UITapGestureRecognizer* nowPlayingTap = [[[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                      action:@selector(nowPlayingBannerTapped:)] autorelease];
     [nowPlayingTap setNumberOfTapsRequired:1];
@@ -179,6 +175,15 @@
     }
 }
 
+- (void)showContactPage:(id)sender
+{
+    NSURL* contactUrl = [NSURL URLWithString:[self.radioConfig objectForKey:kHomepageKey]];
+    UIApplication* a = [UIApplication sharedApplication];
+    if ([a canOpenURL:contactUrl]) {
+        [a openURL:contactUrl];
+    }
+}
+
 - (void)showAlert:(NSString *)title message:(NSString *)message
 {
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:title
@@ -225,31 +230,6 @@
     [self resignFirstResponder];
     
     [super viewWillDisappear: animated];
-}
-
-#pragma mark MFMailComposeViewControllerDelegate
-
-- (MFMailComposeViewController *)createMailComposer
-{
-    NSString* streamEmailContact = [self.radioConfig objectForKey:kContactKey];
-    MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
-    [mailComposer setToRecipients:[NSArray arrayWithObject:streamEmailContact]];
-    [mailComposer setSubject:[radioConfig objectForKey:kEmailSubjectKey]];
-    [mailComposer setMailComposeDelegate:self];
-    return mailComposer;
-}
-
-- (IBAction)composeMessage:(id)sender
-{
-    MFMailComposeViewController* mailComposer = [self createMailComposer];
-    [self presentModalViewController:mailComposer animated:YES];
-}
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller
-          didFinishWithResult:(MFMailComposeResult)result
-                        error:(NSError *)error
-{
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark AudioStreamer Notifications
@@ -465,6 +445,14 @@
     [controller release];
 }
 
+- (NSString *)emailToAddress {
+    return [self.radioConfig objectForKey:kContactKey];
+}
+
+- (NSString *)emailSubject {
+    return [self.radioConfig objectForKey:kEmailSubjectKey];
+}
+
 #pragma mark UIViewController
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -487,7 +475,6 @@
     [scrollingTimer release];
     scrollingTimer = nil;
     [self setNowPlayingBanner:nil];
-    [self setComposeMessageButton:nil];
     [self setPlayPauseButton:nil];
     [self setLvlMeter:nil];
     [self setLogoImage:nil];
@@ -503,7 +490,6 @@
 {
     [scrollingTimer invalidate];
     [scrollingTimer release];
-    [composeMessageButton release];
     [playPauseButton release];
     [lvlMeter release];
     [nowPlayingBanner release];

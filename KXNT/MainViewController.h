@@ -6,18 +6,16 @@
 //  Copyright 2011 Cibo Technology, LLC. All rights reserved.
 //
 
-#import <MessageUI/MessageUI.h>
-
 #import "FlipsideViewController.h"
 #import "AQLevelMeter.h"
 #import "AudioStreamer.h"
 #import "TwitterFeed.h"
 
 @interface MainViewController : UIViewController
-<FlipsideViewControllerDelegate, MFMailComposeViewControllerDelegate>
+<FlipsideViewControllerDelegate>
 {
     AudioStreamer* streamer;
-    UIButton *composeMessageButton;
+    UIButton *contactButton;
     UILabel *nowPlayingBanner;
     UIImageView *logoImage;
     NSTimer* scrollingTimer;
@@ -26,8 +24,7 @@
     UIImageView *textMask;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *composeMessageButton;
-- (MFMailComposeViewController*) createMailComposer;
+@property (nonatomic, retain) IBOutlet UIButton *contactButton;
 
 @property (nonatomic, retain) IBOutlet UILabel *nowPlayingBanner;
 @property (nonatomic, retain) IBOutlet UIButton* playPauseButton;
@@ -42,7 +39,7 @@
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)playPause:(id)sender;
-- (IBAction)composeMessage:(id)sender;
+- (IBAction)showContactPage:(id)sender;
 
 - (void) enterBackground;
 - (void) enterForground;

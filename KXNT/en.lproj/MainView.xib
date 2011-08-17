@@ -253,21 +253,21 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="510316378"/>
-						<string key="IBUINormalTitle">email</string>
+						<string key="IBUINormalTitle">contact</string>
 						<reference key="IBUIHighlightedTitleColor" ref="695040092"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="122599651"/>
-						<object class="NSCustomResource" key="IBUIHighlightedImage" id="491656799">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="96683247">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">EmailDown.png</string>
+							<string key="NSResourceName">ContactDown.png</string>
 						</object>
-						<reference key="IBUISelectedImage" ref="491656799"/>
+						<reference key="IBUISelectedImage" ref="96683247"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">EmailUp.png</string>
+							<string key="NSResourceName">ContactUp.png</string>
 						</object>
 					</object>
 				</object>
@@ -335,23 +335,6 @@
 					<int key="connectionID">46</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">composeMessage:</string>
-						<reference key="source" ref="790817779"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">50</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">composeMessageButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="790817779"/>
-					</object>
-					<int key="connectionID">51</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">nowPlayingBanner</string>
 						<reference key="source" ref="372490531"/>
@@ -382,6 +365,23 @@
 						<reference key="destination" ref="887727117"/>
 					</object>
 					<int key="connectionID">63</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">contactButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="790817779"/>
+					</object>
+					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">showContactPage:</string>
+						<reference key="source" ref="790817779"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">65</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -524,7 +524,7 @@
 					<string>AQLevelMeter</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="2"/>
+					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -544,7 +544,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">63</int>
+			<int key="maxID">65</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -564,8 +564,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>composeMessage:</string>
 							<string>playPause:</string>
+							<string>showContactPage:</string>
 							<string>showInfo:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -579,18 +579,18 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>composeMessage:</string>
 							<string>playPause:</string>
+							<string>showContactPage:</string>
 							<string>showInfo:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">composeMessage:</string>
+								<string key="name">playPause:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">playPause:</string>
+								<string key="name">showContactPage:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -603,7 +603,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>composeMessageButton</string>
+							<string>contactButton</string>
 							<string>loadingIndicator</string>
 							<string>logoImage</string>
 							<string>lvlMeter</string>
@@ -626,7 +626,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>composeMessageButton</string>
+							<string>contactButton</string>
 							<string>loadingIndicator</string>
 							<string>logoImage</string>
 							<string>lvlMeter</string>
@@ -637,7 +637,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">composeMessageButton</string>
+								<string key="name">contactButton</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -689,8 +689,8 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>EmailDown.png</string>
-				<string>EmailUp.png</string>
+				<string>ContactDown.png</string>
+				<string>ContactUp.png</string>
 				<string>ScheduleDown.png</string>
 				<string>ScheduleUp.png</string>
 				<string>bk.png</string>

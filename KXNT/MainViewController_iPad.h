@@ -10,7 +10,7 @@
 #import "MainViewController.h"
 
 @interface MainViewController_iPad : MainViewController
-<UIPopoverControllerDelegate, MFMailComposeViewControllerDelegate>
+<UIPopoverControllerDelegate>
 {
     UIPopoverController* popover;
     UIImageView *background;

@@ -8,6 +8,9 @@
 
 #import "FlipsideViewController.h"
 
+@interface FlipsideViewController(Private)
+- (void) showcaseImageTapped:(id)sender;
+@end
 
 @implementation FlipsideViewController
 
@@ -58,6 +61,11 @@
     [self.view addGestureRecognizer:imageZoomGesture];
     
     zoomableImages = [[NSArray alloc] initWithObjects:image1, image2, image3, image4, image5, image6, image7, image8, nil];
+    
+    UITapGestureRecognizer* g = [[[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                         action:@selector(showcaseImageTapped:)] autorelease];
+    [showcaseImage setUserInteractionEnabled:YES];
+    [showcaseImage addGestureRecognizer:g];
 }
 
 - (void)viewDidUnload
@@ -202,5 +210,37 @@
                          currentlyZoomedImage = nil;
                      }];
 }
+
+#pragma mark MFMailComposeViewControllerDelegate
+
+- (void)showcaseImageTapped:(id)sender
+{
+    MFMailComposeViewController* mailComposer = [self createMailComposer];
+    [self presentModalViewController:mailComposer animated:YES];
+}
+
+- (MFMailComposeViewController *)createMailComposer
+{
+    MFMailComposeViewController* mailComposer = [[[MFMailComposeViewController alloc] init] autorelease];
+    [mailComposer setToRecipients:[NSArray arrayWithObject:[self.delegate emailToAddress]]];
+    [mailComposer setSubject:[self.delegate emailSubject]];
+    [mailComposer setMailComposeDelegate:self];
+    return mailComposer;
+}
+
+- (IBAction)composeMessage:(id)sender
+{
+    MFMailComposeViewController* mailComposer = [self createMailComposer];
+    [self presentModalViewController:mailComposer animated:YES];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
 
 @end
