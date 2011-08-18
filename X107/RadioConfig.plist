@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contact</key>
+	<string>steve@stevenohrdenlive.com</string>
+	<key>description</key>
+	<string>Now Playing: A digital recreation of X-107.5 in cyberspace.</string>
+	<key>emailsubject</key>
+	<string>Steve Nohrden Live!</string>
+	<key>headliner-schedule</key>
+	<string>Steve Nohrden Live
+3pm - 5pm on Sundays</string>
+	<key>headliner-tagline</key>
+	<string>Discussing real estate and the politics that surround it</string>
+	<key>homepage</key>
+	<string>http://freestuff.x1075lasvegas.radio.com/m/register.aspx</string>
+	<key>source</key>
+	<string>http://provisioning.streamtheworld.com/pls/KXTEFM.pls</string>
+	<key>twitteraccount</key>
+	<string>X1075LasVegas</string>
+</dict>
+</plist>
