@@ -162,7 +162,7 @@
                          dispatch_async(dispatch_get_main_queue(), ^(void) {
                              [self performSelector:@selector(fetchLatestTweet)
                                         withObject:nil
-                                        afterDelay:60];
+                                        afterDelay:600.];
                          });
                      }];
 }

@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B86F78613DBB83200B9C7A2"
-               BuildableName = "klucradio.app"
+               BuildableName = "x107radio.app"
                BlueprintName = "x107radio"
                ReferencedContainer = "container:X107.xcodeproj">
             </BuildableReference>
@@ -41,7 +41,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B86F78613DBB83200B9C7A2"
-            BuildableName = "klucradio.app"
+            BuildableName = "x107radio.app"
             BlueprintName = "x107radio"
             ReferencedContainer = "container:X107.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B86F78613DBB83200B9C7A2"
-            BuildableName = "klucradio.app"
+            BuildableName = "x107radio.app"
             BlueprintName = "x107radio"
             ReferencedContainer = "container:X107.xcodeproj">
          </BuildableReference>
