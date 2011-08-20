@@ -140,7 +140,7 @@
     }
     [twitter fetchLatestTweet:streamTwitterAccount
                      callback:^(NSError *errorOrNil, NSString *tweetText) {
-                         if (nil == errorOrNil) {
+                         if ((nil == errorOrNil) && (tweetText)) {
                              NSString* streamDescription = [self.radioConfig objectForKey:kDescriptionKey];
                              NSString* s = [streamDescription stringByAppendingFormat:@" @%@: %@", streamTwitterAccount, tweetText];
                              UIFont* f = self.nowPlayingBanner.font;
