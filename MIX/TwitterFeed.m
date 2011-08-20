@@ -49,7 +49,7 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
     
     NSURLRequest* req = [NSURLRequest requestWithURL:apiUrl
                                         cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                    timeoutInterval:60.0];
+                                    timeoutInterval:10.];
     
 	conn = [[NSURLConnection alloc] initWithRequest:req
                                            delegate:self];
@@ -129,6 +129,25 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
         @catch (NSException *exception) {
             NSLog(@"%@", exception);
         }
+    } else if ([[result allKeys] containsObject:@"error"]) {
+        NSString* errorMessage = [result objectForKey:@"error"];
+        NSLog(@"%@", errorMessage);
+        NSDictionary* userInfo = [NSDictionary dictionaryWithObject:errorMessage
+                                                             forKey:kTwitterFeedResultErrorUserInfoKey];
+        NSError* err = [NSError errorWithDomain:kTwitterFeedResultErrorDomain
+                                           code:kTwitterError_Api
+                                       userInfo:userInfo];
+        if (resultCallback) {
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                resultCallback(err, nil);
+            });
+        }
+    } else {
+        if (resultCallback) {
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                resultCallback(nil, nil);
+            });
+        }
     }
 }
 
@@ -146,20 +165,6 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
 
 #pragma mark NSURLConnectionDelegate
 
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-//	NSLog(@"Connection didReceiveResponse: %@ - %@", response, [response MIMEType]);
-//}
-
-//- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-//	NSLog(@"Connection didReceiveAuthenticationChallenge: %@", challenge);
-//    
-//	NSURLCredential *credential = [NSURLCredential credentialWithUser:username.text
-//															 password:password.text
-//														  persistence:NSURLCredentialPersistenceForSession];
-//    
-//	[[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
-//}
-
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
 	//NSLog(@"Connection didReceiveData of length: %u", data.length);
@@ -175,7 +180,7 @@ NSString* kTwitterFeedResultErrorUserInfoKey = @"SBJsonStreamParserError";
             NSDictionary* userInfo = [NSDictionary dictionaryWithObject:parser.error
                                                                  forKey:kTwitterFeedResultErrorUserInfoKey];
             NSError* err = [NSError errorWithDomain:kTwitterFeedResultErrorDomain
-                                               code:1
+                                               code:kTwitterError_Parser
                                            userInfo:userInfo];
             dispatch_async(dispatch_get_main_queue(), ^(void) {
                 resultCallback(err, nil);
