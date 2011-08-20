@@ -149,15 +149,21 @@
                              self.nowPlayingBanner.bounds = newBounds;
                              self.nowPlayingBanner.text = s;
                              self.tweetActionUrl = [TwitterFeed extractUrlFromTweet:tweetText];
-                                                          
-                             dispatch_async(dispatch_get_main_queue(), ^(void) {
-                                 [self performSelector:@selector(fetchLatestTweet)
-                                            withObject:nil
-                                            afterDelay:60];
-                             });
                          } else {
                              NSLog(@"%@", errorOrNil);
+                             NSString* s = [self.radioConfig objectForKey:kDescriptionKey];
+                             UIFont* f = self.nowPlayingBanner.font;
+                             CGSize size = [s sizeWithFont:f];
+                             CGRect newBounds = CGRectMake(0, 0, size.width, size.height);
+                             self.nowPlayingBanner.bounds = newBounds;
+                             self.nowPlayingBanner.text = s;
                          }
+                         
+                         dispatch_async(dispatch_get_main_queue(), ^(void) {
+                             [self performSelector:@selector(fetchLatestTweet)
+                                        withObject:nil
+                                        afterDelay:600.];
+                         });
                      }];
 }
 

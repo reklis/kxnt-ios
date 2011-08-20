@@ -12,6 +12,12 @@
 extern NSString* kTwitterFeedResultErrorDomain;
 extern NSString* kTwitterFeedResultErrorUserInfoKey;
 
+typedef enum kTwitterErrorCodeEnum {
+    kTwitterError_Http = 1,
+    kTwitterError_Parser,
+    kTwitterError_Api,
+} kTwitterErrorCode;;
+
 typedef void (^TwitterFeedResultCallback)(NSError* errorOrNil, NSString* tweetText);
 
 @interface TwitterFeed : NSObject
