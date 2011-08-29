@@ -5,19 +5,19 @@
 	<key>contact</key>
 	<string>steve@stevenohrdenlive.com</string>
 	<key>description</key>
-	<string>Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area </string>
+	<string>Now Playing: CBS News Radio KXNT 100.5 FM Covering Las Vegas Metropolitan Area -- Steve Nohrden Live Sundays from 3 to 6pm (702) 689-HOME that&apos;s (702) 689-4663 with Kevin Mikrut Solve YOUR Real Estate Problems NOW (702) 689-HOME that&apos;s (702) 689-4663 -- </string>
 	<key>emailsubject</key>
 	<string>Steve Nohrden Live!</string>
+	<key>headliner-schedule</key>
+	<string>Steve Nohrden Live
+3pm - 5pm on Sundays</string>
+	<key>headliner-tagline</key>
+	<string>Discussing real estate and the politics that surround it</string>
 	<key>homepage</key>
 	<string>http://kxnt-am.listenernetwork.com/</string>
 	<key>source</key>
 	<string>http://provisioning.streamtheworld.com/pls/KXNTAM.pls</string>
 	<key>twitteraccount</key>
 	<string>kxnt</string>
-	<key>headliner-schedule</key>
-	<string>Steve Nohrden Live
-3pm - 5pm on Sundays</string>
-	<key>headliner-tagline</key>
-	<string>Discussing real estate and the politics that surround it</string>
 </dict>
 </plist>

@@ -110,7 +110,7 @@
 {
     CGRect bannerRect = self.nowPlayingBanner.bounds;
     CGFloat bannerWidth = CGRectGetWidth(bannerRect);
-    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
+    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -1., 0.);
     if (UIInterfaceOrientationIsPortrait(currentOrientation)) {
         if (t.tx <= bannerWidth*-.7) {
             t = CGAffineTransformTranslate(t, bannerWidth*1.4, 0);
