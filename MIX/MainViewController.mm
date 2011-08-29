@@ -424,7 +424,7 @@
 
 - (void)scrollNowPlayingBanner:(NSTimer*)timer
 {
-    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -.5, 0.);
+    CGAffineTransform t = CGAffineTransformTranslate(self.nowPlayingBanner.transform, -1., 0.);
     CGRect bannerRect = self.nowPlayingBanner.bounds;
     CGFloat bannerWidth = CGRectGetWidth(bannerRect);
     if (t.tx <= bannerWidth*-.9) {
